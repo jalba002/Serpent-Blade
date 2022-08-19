@@ -269,7 +269,7 @@
       "url": "https://packages.unity.com"
     },
     "es.jacksparrot.audio": {
-      "version": "file:D:/Hackathons/Example_GameJamMasterClass/ExternalPackages/audio-pkg",
+      "version": "file:../ExternalPackages/audio-pkg",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -277,13 +277,13 @@
       }
     },
     "es.jacksparrot.dotween": {
-      "version": "file:D:/Hackathons/Example_GameJamMasterClass/ExternalPackages/dotween-pkg",
+      "version": "file:../ExternalPackages/dotween-pkg",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "es.jacksparrot.ui": {
-      "version": "file:D:/Hackathons/Example_GameJamMasterClass/ExternalPackages/ui-pkg",
+      "version": "file:../ExternalPackages/ui-pkg",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -295,7 +295,7 @@
       }
     },
     "es.jacksparrot.utils": {
-      "version": "file:D:/Hackathons/Example_GameJamMasterClass/ExternalPackages/utils-pkg",
+      "version": "file:../ExternalPackages/utils-pkg",
       "depth": 0,
       "source": "local",
       "dependencies": {}
