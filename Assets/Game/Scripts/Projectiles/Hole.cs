@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hole : Bullet
 {
+    public float upsideDir = 1f;
     public override void InstantiateBullet(Vector3 center)
     {
         base.InstantiateBullet(center);
@@ -13,7 +14,7 @@ public class Hole : Bullet
         // Destroy self after time.
         if(Physics.Raycast(center, Vector3.down, out RaycastHit hit, 50f))
         {
-            transform.position = new Vector3(transform.position.x, hit.point.y + 0.1f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, hit.point.y + upsideDir, transform.position.z);
         }
         else
         {

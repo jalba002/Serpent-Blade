@@ -157,3 +157,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPrefab: 0
   projectilePrefab: {fileID: 0}
+  upsideDir: 0.1

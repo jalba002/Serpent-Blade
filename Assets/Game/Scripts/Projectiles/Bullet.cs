@@ -7,8 +7,9 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] protected bool spawnPrefab = false;
     [SerializeField] protected GameObject projectilePrefab;
+
     public virtual void InstantiateBullet(Vector3 center)
     {
-        
+        // Nah.
     }
 }
