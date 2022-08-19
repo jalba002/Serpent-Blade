@@ -22,7 +22,7 @@ public class ProjectileShooterManager : MonoBehaviour
     private void ShootProjectile()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Physics.Raycast(ray, out RaycastHit hit, 100);
+        Physics.Raycast(ray, out RaycastHit hit, 500);
 
         if (!readyToShoot)
         {

@@ -41,7 +41,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904566970261642354}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: a983fa60a69ba2c4495f5bd84ffc192e, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 0827b4d9672de0b479af40d1e79e30ec, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 1
   m_StartSeed: 0
@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904566970482660013}
   - component: {fileID: 1904566970482660015}
-  - component: {fileID: 1904566970482660014}
+  - component: {fileID: -1162837074557632429}
   m_Layer: 0
   m_Name: VFX_GroundSlashDebrisTrail
   m_TagString: Untagged
@@ -169,7 +169,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1904566970482660014
+--- !u!114 &-1162837074557632429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1904566970482660012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3082f5e1baf3ad7469d4272723f021db, type: 3}
+  m_Script: {fileID: 11500000, guid: f4590b9d8a10f6540acb6104e6b60c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
