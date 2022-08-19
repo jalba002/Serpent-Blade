@@ -349,10 +349,10 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.33333334
+  - time: 0.3
     functionName: SpawnBullet
     data: 
-    objectReferenceParameter: {fileID: 5439504942761732450, guid: b8854af8ac8038849b3fd27fef1e8923,
+    objectReferenceParameter: {fileID: 4897995629898027594, guid: 8d422da619eec614e9c74391f3caf14b,
       type: 3}
     floatParameter: 0
     intParameter: 0
