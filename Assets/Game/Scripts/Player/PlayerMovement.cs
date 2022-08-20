@@ -22,7 +22,7 @@ namespace Player
         private Vector3 platformMovement;
         private float currentSpeed;
 
-        private Animator animator;
+        public Animator animator;
         private float _animationBlend;
 
         private float nextDashTime = 0f;
