@@ -58,6 +58,23 @@ namespace Boss
                 //_animator.SetTrigger("Headslam");
                 _stateMachine.SwitchState<Headslam>();
             }
+            if (GUILayout.Button("Scream"))
+            {
+                // Apply headslam animation
+                //_animator.SetTrigger("Headslam");
+                _stateMachine.SwitchState<Scream>();
+            }
+            if (GUILayout.Button("Sunshine"))
+            {
+                // Apply headslam animation
+                //_animator.SetTrigger("Headslam");
+                _stateMachine.SwitchState<Headslam>();
+            }
+        }
+
+        public void LaserUp()
+        {
+            // find the particle and call it to start shooting.
         }
     }
 }

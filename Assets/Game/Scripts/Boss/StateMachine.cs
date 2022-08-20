@@ -22,15 +22,6 @@ namespace Boss
                 _attackStorer = Instantiate(_attackStorer);
         }
 
-        /// <summary>
-        /// Testing purposes, remove after.
-        /// </summary>
-        public void Start()
-        {
-            if(startAutomatically)
-                SwitchState<FightStart>();
-        }
-
         public void Update()
         {
             UpdateTick(Time.deltaTime);
