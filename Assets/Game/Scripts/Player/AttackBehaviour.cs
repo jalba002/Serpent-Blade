@@ -5,10 +5,12 @@ public class AttackBehaviour : StateMachineBehaviour
 {
     public PlayerAttackData AttackData;
     PlayerAttackController playerAttackController;
+    private bool attackActive = true;
 
     // OnStateEnter is called before OnStateEnter is called on any state inside this state machine
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        attackActive = true;
         playerAttackController = animator.GetComponentInParent<PlayerAttackController>();
     }
 
@@ -17,13 +19,18 @@ public class AttackBehaviour : StateMachineBehaviour
     {
         bool l_Enabled = stateInfo.normalizedTime >= AttackData.StartPctTime && stateInfo.normalizedTime <= AttackData.EndPctTime;
         playerAttackController.EnableAttackCollider(l_Enabled);
+
+        if (stateInfo.normalizedTime >= 0.95f && attackActive)
+        {
+            playerAttackController.ResetAttackComboTimer();
+            attackActive = false;
+        }
     }
 
     // OnStateExit is called before OnStateExit is called on any state inside this state machine
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         playerAttackController.EnableAttackCollider(false);
-        playerAttackController.ResetAttackComboTimer();
     }
 
     // OnStateMove is called before OnStateMove is called on any state inside this state machine
