@@ -9,7 +9,27 @@ ModelImporter:
   - first:
       74: -1693087603800158522
     second: RIG-Rig|Movement
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: eb7f586cca07511448d2a2813645915a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Negro
+    second: {fileID: 2100000, guid: 5037a8eb93886f64a9aa7f5948cf0015, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rotten
+    second: {fileID: 2100000, guid: e8959c89f009cd24a892e6b1e4c6c31d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 71f554deeb32cb840beabeb7b049b439, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
