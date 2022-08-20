@@ -11,10 +11,13 @@ namespace Player
         public BoxCollider SwordCollider;
 
         public float AttackComboValidTime = 0.5f;
-        private bool attackComboTimerDone;
+        [SerializeField] private bool attackComboTimerDone;
         Coroutine punchComboCo;
-        private int attackCombo = 1;
-        private bool isAttacking = false;
+        [SerializeField] private int attackCombo = 1;
+        [SerializeField] private bool isAttacking = false;
+
+        public float ShieldCooldown = 2f;
+        public float NextShieldTime;
 
         void Awake()
         {
@@ -29,9 +32,11 @@ namespace Player
 
         public void OnShield()
         {
-            if (isAttacking) return;
+            if (isAttacking || NextShieldTime >= Time.time) return;
 
+            NextShieldTime = Time.time + ShieldCooldown;
             shieldController.gameObject.SetActive(true);
+            animator.SetTrigger("Block");
         }
 
         public void OnAttack()
@@ -50,6 +55,7 @@ namespace Player
 
             animator.SetTrigger("Attack");
             animator.SetInteger("AttackCombo", attackCombo);
+            animator.SetBool("InCombo", true);
 
             if (!attackComboTimerDone)
             {
@@ -61,7 +67,6 @@ namespace Player
         public void ResetAttackComboTimer()
         {
             isAttacking = false;
-
             punchComboCo = StartCoroutine(AttackComboTimerCo());
         }
 
@@ -70,11 +75,12 @@ namespace Player
             yield return new WaitForSeconds(AttackComboValidTime);
             attackComboTimerDone = true;
             attackCombo = 1;
+            animator.SetBool("InCombo", false);
         }
 
         public void EnableAttackCollider(bool active)
         {
-            SwordCollider.enabled = active;
+            //SwordCollider.enabled = active;
         }
     }
 }

@@ -30,11 +30,13 @@ namespace Player
         public Transform ArenaCenter;
 
         public PlayerMovementData MovementData;
+        private MeshTrail meshTrail;
 
         private void Awake()
         {
             controller = GetComponent<CharacterController>();
             animator = GetComponentInChildren<Animator>();
+            meshTrail = GetComponentInChildren<MeshTrail>();
         }
 
         private void Start()
@@ -142,8 +144,10 @@ namespace Player
 
         IEnumerator DashCoroutine(float duration)
         {
+            meshTrail.ActivateTrail();
             yield return new WaitForSeconds(duration);
             ChangeState(PlayerStates.Standing);
+            meshTrail.DeactivateTrail();
         }
     }
 }
