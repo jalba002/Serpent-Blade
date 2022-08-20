@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Boss;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BulletSpawnManager : MonoBehaviour
 {
@@ -21,6 +23,8 @@ public class BulletSpawnManager : MonoBehaviour
         }
     }
 
+    public GameObject _debugParticlePrefab;
+
     private void Awake()
     {
         Instance = this;
@@ -31,4 +35,17 @@ public class BulletSpawnManager : MonoBehaviour
         Bullet a = Instantiate(prefab as GameObject, position, Quaternion.identity).GetComponent<Bullet>();
         a.InstantiateBullet(position);
     }
+
+    public void OnAttack()
+    {
+        Handspawn();
+    }
+    
+    void Handspawn()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Physics.Raycast(ray, out RaycastHit hit, 50f);
+        SpawnBullet(_debugParticlePrefab, hit.point);               
+    }
+     
 }
