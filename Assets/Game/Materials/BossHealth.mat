@@ -83,7 +83,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_110775e258aa490c88a38c5568150239: 1
+    - Vector1_1: 0.4
+    - Vector1_110775e258aa490c88a38c5568150239: 0.9
     - Vector1_29ee797efe48446696be372281f213ec: 1
     - Vector1_f64c1c07f5804191b7568919e5358ed0: 0
     - Vector1_fb31435997ca4e49a8380655880be25c: 2.5
@@ -96,6 +97,7 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
+    - _CurrentHealth: 1
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
@@ -104,6 +106,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _MaxHealth: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -118,7 +121,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Vector2_36026bb8a5294122a71e3d386cef4d1a: {r: 0, g: 0.1, b: 0, a: 0}
+    - Vector2_36026bb8a5294122a71e3d386cef4d1a: {r: 0, g: 0.11, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

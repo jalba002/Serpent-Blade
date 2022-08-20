@@ -144,10 +144,9 @@ namespace Player
 
         IEnumerator DashCoroutine(float duration)
         {
-            meshTrail.ActivateTrail();
+            meshTrail.ActivateTrail(duration);
             yield return new WaitForSeconds(duration);
             ChangeState(PlayerStates.Standing);
-            meshTrail.DeactivateTrail();
         }
     }
 }

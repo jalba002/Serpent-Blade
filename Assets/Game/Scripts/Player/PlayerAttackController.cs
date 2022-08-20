@@ -19,6 +19,8 @@ namespace Player
         public float ShieldCooldown = 2f;
         public float NextShieldTime;
 
+        private PlayerAttackData currentAttack;
+
         void Awake()
         {
             animator = GetComponentInChildren<Animator>();
@@ -81,6 +83,16 @@ namespace Player
         public void EnableAttackCollider(bool active)
         {
             //SwordCollider.enabled = active;
+        }
+
+        public PlayerAttackData GetCurrentAttack()
+        {
+            return currentAttack;
+        }
+
+        public void SetCurrentAttack(PlayerAttackData newAttack)
+        {
+            currentAttack = newAttack;
         }
     }
 }

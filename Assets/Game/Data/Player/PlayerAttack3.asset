@@ -15,3 +15,4 @@ MonoBehaviour:
   ThisAttackType: 2
   StartPctTime: 0.3
   EndPctTime: 0.85
+  AttackDamage: 18

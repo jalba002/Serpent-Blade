@@ -7970,7 +7970,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &47766979
 GameObject:
@@ -8031,11 +8031,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0.1
-  m_FrequencyGain: 0.1
-  mNoiseOffsets: {x: -586.45776, y: -341.4701, z: 315.5808}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 3
+  mNoiseOffsets: {x: 489.12164, y: 364.3243, z: 634.036}
 --- !u!114 &47766985
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -8117,6 +8117,24 @@ MonoBehaviour:
   m_LegacyHeightOffset: 3.4028235e+38
   m_LegacyHeadingBias: 3.4028235e+38
   m_HeadingIsSlave: 0
+--- !u!1 &305523248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4897501538494526632, guid: d0167105a0eca3e4887093b555d57d4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4897501539771474454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &305523253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305523248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b812a695410e749b6dad1da098d9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &378436832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8334,7 +8352,8 @@ GameObject:
   - component: {fileID: 423313538}
   - component: {fileID: 423313539}
   - component: {fileID: 423313540}
-  m_Layer: 0
+  - component: {fileID: 423313541}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8441,6 +8460,23 @@ MonoBehaviour:
   isAttacking: 0
   ShieldCooldown: 2
   NextShieldTime: 0
+--- !u!114 &423313541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423313535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb692cc6de3a1634fb300aef5354d3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 1000
+  InvulnerableTime: 1
+  mainCameraShake: {fileID: 1707611765}
+  CameraShakeDuration: 0.15
+  CameraShakeIntensity: 5
 --- !u!1 &488017578
 GameObject:
   m_ObjectHideFlags: 0
@@ -8594,13 +8630,128 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &526403049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4897501540374704753, guid: d0167105a0eca3e4887093b555d57d4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4897501539771474454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &526403054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526403049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b812a695410e749b6dad1da098d9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &558257096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 558257097}
+  - component: {fileID: 558257100}
+  - component: {fileID: 558257099}
+  - component: {fileID: 558257098}
+  m_Layer: 7
+  m_Name: Cube
+  m_TagString: PlayerAttack
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &558257097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558257096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.007469, z: 0}
+  m_LocalScale: {x: 0.0013069074, y: 0.020671155, z: 0.0014322797}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 691109491551548431}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &558257098
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558257096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &558257099
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558257096}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &558257100
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558257096}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!43 &610850625
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh188580
+  m_Name: pb_Mesh64168
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8758,6 +8909,104 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1015920641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015920645}
+  - component: {fileID: 1015920644}
+  - component: {fileID: 1015920643}
+  - component: {fileID: 1015920642}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &1015920642
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015920641}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1015920643
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015920641}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1015920644
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015920641}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1015920645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015920641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.1368103, y: 5.309, z: -13.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1163485994
 GameObject:
   m_ObjectHideFlags: 0
@@ -16603,7 +16852,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1163568848
 GameObject:
@@ -16731,6 +16980,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trails
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042079115026037191, guid: df7cd39d0441eea4e99392b396d4d3ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4042079115026037192, guid: df7cd39d0441eea4e99392b396d4d3ba,
         type: 3}
@@ -21690,7 +21944,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1363794936
 GameObject:
@@ -21721,7 +21975,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1001 &1373359292
 PrefabInstance:
@@ -21807,6 +22061,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4186017775250347352, guid: a69bf4952334e8d499a7f3b2dabb7282,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186017775250347352, guid: a69bf4952334e8d499a7f3b2dabb7282,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -21847,7 +22106,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh188666
+  m_Name: pb_Mesh64222
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26815,8 +27074,46 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1552656000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4897501538888786250, guid: d0167105a0eca3e4887093b555d57d4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4897501539771474454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1552656005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552656000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b812a695410e749b6dad1da098d9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1557156323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5707752198381116203, guid: d0167105a0eca3e4887093b555d57d4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4897501539771474454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1557156326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557156323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d258a67a8b32f154fadb7fe96229f51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 1000
+  NeonHealthBarRenderer: {fileID: 1861503100}
 --- !u!1 &1608818575
 GameObject:
   m_ObjectHideFlags: 0
@@ -26864,7 +27161,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1707611761
 GameObject:
@@ -26877,6 +27174,7 @@ GameObject:
   - component: {fileID: 1707611762}
   - component: {fileID: 1707611763}
   - component: {fileID: 1707611764}
+  - component: {fileID: 1707611765}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -26898,7 +27196,7 @@ Transform:
   m_Children:
   - {fileID: 47766980}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 36.9, y: 0, z: 0}
 --- !u!114 &1707611763
 MonoBehaviour:
@@ -26956,60 +27254,24 @@ MonoBehaviour:
   MaxZoom: -24
   MinZoom: -17
   CameraVerticalLerpSpeed: 4
---- !u!1 &1927076258
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1927076260}
-  - component: {fileID: 1927076259}
-  m_Layer: 0
-  m_Name: TargetGroup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1927076259
+--- !u!114 &1707611765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927076258}
+  m_GameObject: {fileID: 1707611761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5eb80d8e62d9d145bb50fb783c0f731, type: 3}
+  m_Script: {fileID: 11500000, guid: d9dfa04c8f71253499a2311086174f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PositionMode: 0
-  m_RotationMode: 0
-  m_UpdateMethod: 2
-  m_Targets:
-  - target: {fileID: 423313537}
-    weight: 1
-    radius: 0
-  - target: {fileID: 0}
-    weight: 1
-    radius: 0
---- !u!4 &1927076260
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!23 &1861503100 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6068316902472407466, guid: d0167105a0eca3e4887093b555d57d4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4897501539771474454}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927076258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.02, y: 4.43, z: -13.68}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5724451101723000
 Transform:
   m_ObjectHideFlags: 0
@@ -27034,7 +27296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4710486455513977108}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27067,7 +27329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5724451101723000}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.L.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27083,7 +27345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2763793132380057691}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27114,7 +27376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5474326887011827478}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27180,7 +27442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3155307813684766151}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27196,7 +27458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588239317662226695}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27212,7 +27474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7348219962890866240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_spin_ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27228,7 +27490,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1377589902209047279}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-forearm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27277,7 +27539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6290292373394759220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_tweak.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27360,7 +27622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1254941806262308497}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27376,7 +27638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3869192299574986085}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VIS_thigh_ik_pole.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27407,7 +27669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4336323512057897334}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.004.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27439,7 +27701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4982913682866058297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-heel.02_roll1.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27455,7 +27717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2530456144279224573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.003.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27535,7 +27797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3296398608285853027}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-heel.02_rock1.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27551,7 +27813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5953599225010752338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-upper_arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27616,7 +27878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4862653143427114659}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-toe.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27632,7 +27894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5019733402188067678}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-pelvis.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27665,7 +27927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6549208951405495753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27713,7 +27975,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9063633735933954238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-shin_ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27746,7 +28008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3804379899363961918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_spin_ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27762,7 +28024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7319321260000729400}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.R.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27778,7 +28040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7447149417699288036}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_heel_ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27810,7 +28072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2941980203030834008}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27826,7 +28088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7446079950617792128}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27842,7 +28104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7672041241408048518}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27892,7 +28154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6608230148061546554}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VIS_thigh_ik_pole.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27908,7 +28170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6252393386501734181}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27977,7 +28239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4087363972781278075}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27993,7 +28255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 339754799120534541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_master.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28024,7 +28286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3837656813780382606}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.001.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28040,7 +28302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7414180350310670018}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-shoulder.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28056,7 +28318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4084465060527046857}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.002.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28072,7 +28334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7229986052558733309}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28088,7 +28350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 32445763699264282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_tweak.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28104,7 +28366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6916917832042496199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spine_fk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28124,6 +28386,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1179815899}
+  - {fileID: 558257097}
   m_Father: {fileID: 5363800424450254057}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28167,7 +28430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314733731681069578}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28183,7 +28446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8949655829370736441}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28199,7 +28462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 183519704892109703}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-foot.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28231,7 +28494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5887893761833560081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_ik_target.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28262,7 +28525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8780377032511853664}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_parent_widget.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28293,7 +28556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6385400798314133039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-toe.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28309,7 +28572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2500006255602887685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: toe_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28340,7 +28603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6515667498211310287}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hand.R.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28356,7 +28619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1687155023876100117}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-toe.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28372,7 +28635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2072974941889866188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28438,7 +28701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7511587650502067233}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_base_hair_tail_F.001.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28505,7 +28768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7926653620891720254}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-forearm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28552,7 +28815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5573696637193474283}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.003.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28568,7 +28831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6316756050122900025}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-thigh.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28584,7 +28847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4491138706784737637}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.002.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28600,7 +28863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4884221021446769988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28632,7 +28895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8965809522349717878}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28648,7 +28911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 441273723721760352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-ROT-neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28681,7 +28944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 518150813161240911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hand.L.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28728,7 +28991,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7830112480584526923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.001.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28761,7 +29024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8308587412530686286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28777,7 +29040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8533470924351844355}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_tweak.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28793,7 +29056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5164968346246156466}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28809,7 +29072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4210964333442069983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-ROT-tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28825,7 +29088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3416157045305730006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_base_hair_tail_F.001.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28841,7 +29104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5489975502009071046}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28857,7 +29120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5412613902335658357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: chest_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28873,7 +29136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2820355743496782165}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_tweak.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28889,7 +29152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4467152401217736957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-shoulder.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28921,7 +29184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9174185840055660075}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.R.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28937,7 +29200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6276998675413606410}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_heel_ik.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28985,7 +29248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1293288177873949684}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-forearm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29035,7 +29298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3422438626425819188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_tweak.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29066,7 +29329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6696812390062350944}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29082,7 +29345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9178706262479055305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VIS_upper_arm_ik_pole.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29098,7 +29361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7262817649461598764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29114,7 +29377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7330670900838082534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_tweak.R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29130,7 +29393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4739551283720264565}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hand.L.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29146,7 +29409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 176858291735440802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-shin.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29193,7 +29456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4911413930212915592}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29307,7 +29570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6769449153647856569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29323,7 +29586,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8786426976390062826}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-heel.02_roll2.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29369,7 +29632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5903982330819466233}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29417,7 +29680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1926403870921589406}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_parent_widget.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29501,7 +29764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7041378038323571209}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-toe_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29534,7 +29797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5465622272285845262}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.R.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29586,7 +29849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3154112859129654870}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.L.003_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29602,7 +29865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8532862638925851954}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_ik_target.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29618,7 +29881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6618201471994746386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29711,7 +29974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1443608800987568162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-shin_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29758,7 +30021,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8362123026683301069}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hand.R.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29806,7 +30069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4361756850962121122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_tweak.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29822,7 +30085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2295654734973497399}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29854,7 +30117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2514903240068382435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.L.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29870,7 +30133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 587600462135383640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29930,7 +30193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2922150839381427065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-spine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29946,7 +30209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6574275692235292446}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-hand_ik.parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29962,7 +30225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7345298513806684111}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_ik_target.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29993,7 +30256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2690775512711772631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30009,7 +30272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8597071914326264627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30040,7 +30303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4726536493476150636}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.R.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30056,7 +30319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5221109328521728605}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_heel_ik.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30072,7 +30335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548623400155269917}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-hand_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30176,7 +30439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1311878435906851726}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_ik_target.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30259,7 +30522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1429361477351831060}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30292,7 +30555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2474840514388855867}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30308,7 +30571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1863207897120072131}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30324,7 +30587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2251372653521298611}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30340,7 +30603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7527491208193397607}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30388,7 +30651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7034602854013852891}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_ik_swing.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30404,7 +30667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6158906605406660262}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30436,7 +30699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4071319818331569306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-spine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30468,7 +30731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3987777099354014671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-Weapon_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30501,7 +30764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5349441386677862630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30550,7 +30813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8364524015543489702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.002.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30566,7 +30829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7951792116302503241}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30582,7 +30845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2487295759249978432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_tweak.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30646,7 +30909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8034357173869369224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30662,7 +30925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3123608599511152669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-upper_arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30711,7 +30974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5149640137322489801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-WGT-hips_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30742,7 +31005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1459423000562041307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-shin_ik.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30823,7 +31086,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1607212254604997347}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30839,7 +31102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3419393926518727063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_ik_target.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30855,7 +31118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4844874861717299296}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hand.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30886,7 +31149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3141650812676573365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-thigh.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30918,7 +31181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3191860261801827305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.L.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30934,7 +31197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 462127975778850180}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_ik_target.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30967,7 +31230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 709280232777457045}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_spine.004_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31016,7 +31279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4733763547387262191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-hand_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31048,7 +31311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5362907504733233693}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-toe.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31064,7 +31327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3245693766701863348}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_parent_widget.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31096,7 +31359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8397027470623748047}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-foot_ik.parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31127,7 +31390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3736884452780384465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-foot.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31174,7 +31437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8755325573368268373}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31207,7 +31470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4911681682614892010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31223,7 +31486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7287005544986418977}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31289,7 +31552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5808956275475257653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.004.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31322,7 +31585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6730098632509294972}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-pelvis.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31338,7 +31601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1870850905589019421}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.001.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31370,7 +31633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1702945996301195084}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31386,7 +31649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3223802425238021507}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hips_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31402,7 +31665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7746984165775684819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-foot_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31418,7 +31681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1546243827984190788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.L.003_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31450,7 +31713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 705617159305114580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-spine.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31481,7 +31744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 306077799883701547}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.R.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31544,7 +31807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 808183918698547161}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: toe_fk.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31606,7 +31869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1382260893601167282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_tweak.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31622,7 +31885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6277588491975964254}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-foot_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31638,7 +31901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4047868953142218130}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31717,7 +31980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2684142680768125963}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.001.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31733,7 +31996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3150878250601774083}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: toe_ik.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31780,7 +32043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523453524788746110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31796,7 +32059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3232431123807785717}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_tweak.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31812,7 +32075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5242098839158943289}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31828,7 +32091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7162450536497182166}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_tweak.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31844,7 +32107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8602872250590333262}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31860,7 +32123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 886581351630552268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-shin_tweak.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31892,7 +32155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6998618852575658990}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.003.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31926,7 +32189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5713511827822892612}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.004.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31958,7 +32221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8005339555309831778}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32050,7 +32313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7393578800824254207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-toe.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32096,7 +32359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7980787709998694404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32128,7 +32391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5708839010795102902}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.001.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32221,7 +32484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1221984541153453010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-forearm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32237,7 +32500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2403577713106040708}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.002.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32300,7 +32563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4444011100406172394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-forearm_ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32332,7 +32595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929920410570687563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_tweak.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32348,7 +32611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5462296097954149451}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32380,7 +32643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2983793086940662437}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-shin_tweak.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32396,7 +32659,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2831944482436738419}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_tweak.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32412,7 +32675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2511730903963960002}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.003.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32489,7 +32752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2652619087913559397}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32522,7 +32785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6819428267583518547}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hand.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32585,7 +32848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4568676794410476536}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_parent_widget.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32601,7 +32864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5899352363302572402}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-WGT-chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32649,7 +32912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2200366054037452155}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32665,7 +32928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5485357859686866699}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32681,7 +32944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2749643786879933467}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.R.003_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32697,7 +32960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3570888845671905955}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VIS_thigh_ik_pole.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32729,7 +32992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1606832959974472550}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32745,7 +33008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8184383440574099799}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_spine.005_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32779,7 +33042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8798007183362828522}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32795,7 +33058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7450152111112340947}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_base_hair_tail.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32811,7 +33074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8219394799648030058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32843,7 +33106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4737135242083267376}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.001_master.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32859,7 +33122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1693938259312344389}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32875,7 +33138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4416961947752261936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-toe.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32907,7 +33170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7662222677474633361}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_tweak.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32970,7 +33233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7025220395603714339}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: toe_ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33003,7 +33266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8596774996276490057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.001.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33019,7 +33282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5168367586056756092}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33051,7 +33314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5818013417329872406}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.L.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33082,7 +33345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6846854491810526215}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-toe.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33113,7 +33376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7905481106786019144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_tweak.R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33145,7 +33408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2896128668653853452}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33176,7 +33439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2785367532834748504}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33192,7 +33455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5067910952504541210}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.L.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33208,7 +33471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3261080404031063659}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33224,7 +33487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5623563161764805203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-toe_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33240,7 +33503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5971943052986291151}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-ROT-tail.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33272,7 +33535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 823022148045947559}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-heel.02.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33288,7 +33551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7061837075781484163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_parent.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33321,7 +33584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3283242826957741863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-heel.02.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33372,7 +33635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2339421111243762001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33388,7 +33651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5128521257649211848}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-heel.02_rock2.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33404,7 +33667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5112384530553476018}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-shin.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33451,7 +33714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5363800424450254057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33467,7 +33730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 199896689615424561}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-upper_arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33483,7 +33746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2403731647665458663}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33515,7 +33778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8902880130024387897}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: head_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33531,7 +33794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4575424337811911195}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_fk.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33547,7 +33810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3153323042644824563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shoulder.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33629,7 +33892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8319722501189974824}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-thigh.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33645,7 +33908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1651437683935316389}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_tweak.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33677,7 +33940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1778627655935553363}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33740,7 +34003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3439938738671996099}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-forearm_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33771,7 +34034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7488286247369810014}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-thigh.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33867,7 +34130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5328184398767708421}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_tweak.L.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33883,7 +34146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2328304751968510430}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-pelvis.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33944,7 +34207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 66393675013328637}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail.006_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33960,7 +34223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1827644648376386307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-upper_arm.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33976,7 +34239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1391466414932525158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.004.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33992,7 +34255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 915336495251346045}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.003.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34008,7 +34271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8053517692207856234}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_ik_swing.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34087,7 +34350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3926126533522267635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.003_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34119,7 +34382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3074682193147468586}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-foot_roll.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34215,7 +34478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2206086114606409959}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.001_master.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34231,7 +34494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9137902883937248916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.001.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34296,7 +34559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2735424723326052082}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_fk.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34328,7 +34591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1638624205778038539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_tweak.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34344,7 +34607,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4735918437001354425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.003.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34375,7 +34638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4537780639647285789}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-shin.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34405,6 +34668,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4897501538494526678, guid: d0167105a0eca3e4887093b555d57d4c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897501538888786248, guid: d0167105a0eca3e4887093b555d57d4c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897501540374704767, guid: d0167105a0eca3e4887093b555d57d4c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4897501540454940768, guid: d0167105a0eca3e4887093b555d57d4c,
         type: 3}
       propertyPath: m_Name
@@ -34539,7 +34817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7739340153271556617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-thigh.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34555,7 +34833,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6657123869848789496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34602,7 +34880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4814671720351453543}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-forearm_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34618,7 +34896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170509534136350354}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.003.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34634,7 +34912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257745756225960299}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-spine.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34683,7 +34961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4725764628922380749}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34699,7 +34977,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4919270695035991305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spine_fk.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34762,7 +35040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5349330872913572924}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34812,7 +35090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 860250004667354602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-shin.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34828,7 +35106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4989861793003836936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.R.003_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34844,7 +35122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7392286680564091014}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.002.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34875,7 +35153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 259115248650075755}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_parent_widget.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34891,7 +35169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7529855936460746863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-heel.02_rock2.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34982,7 +35260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2091707332786929335}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail.006_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34998,7 +35276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1466505253943532727}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_tweak.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35045,7 +35323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3500675174534960150}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35093,7 +35371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 297615693510007420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-forearm.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35125,7 +35403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 346917597515506289}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-WGT-hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35141,7 +35419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2724090212324365483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-ROT-tail.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35157,7 +35435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 798555526676779170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.L.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35284,7 +35562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3511953761379541434}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_ik_target.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35300,7 +35578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8076389132779460206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35364,7 +35642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8481856443135732043}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_tweak.R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35412,7 +35690,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3001292147769142818}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-foot_roll.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35445,7 +35723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1282561697460626530}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-upper_arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35492,7 +35770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6212184643384904068}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-forearm_ik.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35508,7 +35786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5310587847347398488}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_tweak.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35557,7 +35835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6008371200576589226}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_spine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35573,7 +35851,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2921647810201955478}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_ik_target.parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35589,7 +35867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1647281418592717495}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35605,7 +35883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 120747743095973915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_ik_target.parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35621,7 +35899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 892105737080208220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35668,7 +35946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4528296643474550991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35684,7 +35962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8764475554045606009}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35700,7 +35978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2398527757346760704}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.004.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35716,7 +35994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1000759603673228496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35757,7 +36035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 81989776923506748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_ik_target.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35773,7 +36051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1040224867974351042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_ik_target.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35789,7 +36067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7738550993937572373}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.004.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35838,7 +36116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6277462489650294891}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35854,7 +36132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6632375443441525931}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35885,7 +36163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8271337507998503169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-torso.parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35931,7 +36209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2802292501946078803}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35979,7 +36257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 898241725966761357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.004.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35995,7 +36273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4905149055678404292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_tweak.L.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36011,7 +36289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2849876543348066778}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-forearm_ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36027,7 +36305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7761509020367667301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_tweak.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36093,7 +36371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6623111950196338524}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.006_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36109,7 +36387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7077303934190880610}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_parent_widget.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36125,7 +36403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 86772936100482148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-hand_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36141,7 +36419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8856659756205865099}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.003.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36157,7 +36435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 485544256216320274}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36189,7 +36467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5357319024064751335}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-heel.02_roll2.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36205,7 +36483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6515502866757881878}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36221,7 +36499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4829337843570559245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36253,7 +36531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9033316870578565440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_tweak.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36269,7 +36547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1782952169307043752}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_master.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36285,7 +36563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 957136862355760365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36301,7 +36579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8960967819206131089}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-spine.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36317,7 +36595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5432008161053941130}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_ik_swing.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36348,7 +36626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2118475707075301717}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_ik_target.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36364,7 +36642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2997210498498341980}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.001.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36397,7 +36675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3458649490690538868}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-toe.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36413,7 +36691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 316070099899231079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36477,7 +36755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7705328100416419551}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36493,7 +36771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8209219582247016142}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-STR-neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36524,7 +36802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2938485324784382637}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.004.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36556,7 +36834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5074817003078115115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.001_master.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36572,7 +36850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3207337142228675936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-foot_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36588,7 +36866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7166792391388813674}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.004.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36604,7 +36882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5167850323855438760}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36636,7 +36914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 79028896919115911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_ik_target.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36652,7 +36930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 249996784998844355}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VIS_upper_arm_ik_pole.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36668,7 +36946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3401533300775366529}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine.006_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36684,7 +36962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9032058244313334678}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VIS_upper_arm_ik_pole.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36700,7 +36978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 844734034337870597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36716,7 +36994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8691256774899811784}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.002.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36798,7 +37076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8330633019505997342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36830,7 +37108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6795284962295730793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36846,7 +37124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5244403948034258434}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-forearm.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36878,7 +37156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3368689029184538944}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36910,7 +37188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8543908685980179910}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.004.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36958,7 +37236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2056307206483514983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37006,7 +37284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1533076676484977865}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-shin_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37022,7 +37300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8180555328532976668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-hand_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37055,7 +37333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998589815327015984}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-foot.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37071,7 +37349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8634226265912803690}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.002.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37104,7 +37382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7931564070126950284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_heel_ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37169,7 +37447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383457590873009814}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-foot_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37185,7 +37463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5407812073664057915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.004.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37217,7 +37495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 633585598054224237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37233,7 +37511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1020523310449723160}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.004.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37264,7 +37542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421123879146747364}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_base_hair_tail_F.001.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37311,7 +37589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3318920998995337569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.L.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37327,7 +37605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3740298981338039951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: toe_fk.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37343,7 +37621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2074405273868039676}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spine_fk.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37359,7 +37637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1471350332206210459}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VIS_thigh_ik_pole.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37375,7 +37653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3702985281591727429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.001_master.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37409,7 +37687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7841109849960930042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-heel.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37425,7 +37703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8149425390693876129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-pelvis.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37441,7 +37719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7656676551292517629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-heel.02_rock1.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37537,7 +37815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5162863300024679425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_ik_target.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37586,7 +37864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9086282005975102923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_parent_widget.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37618,7 +37896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2908845828431052817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-shin_ik.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37650,7 +37928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4183841785708704315}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_tweak.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37698,7 +37976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523799148571448283}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: toe_ik.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37761,7 +38039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5261102814086900220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.003.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37808,7 +38086,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6871786178990505291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37856,7 +38134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4619084151521265392}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_parent.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37872,7 +38150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334961042126283781}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: toe_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37904,7 +38182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8716131604429849788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-heel.02_roll1.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37998,7 +38276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 409319953251872236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.L.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38014,7 +38292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5014378704262232488}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38123,7 +38401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2032988224754761149}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-pelvis.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38139,7 +38417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3603812947068518428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-shin.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38155,7 +38433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3151138512928881645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-WGT-chest_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38171,7 +38449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3036654402222064438}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-shin.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38203,7 +38481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3289461284343184913}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_tweak.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38219,7 +38497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008969345230193934}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_ik_target.parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38283,7 +38561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2946340574227835266}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_tweak.L.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38299,7 +38577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2638693290344911381}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.001.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38315,7 +38593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943529960520496843}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-foot_ik.parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38331,7 +38609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1459725300735746904}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38379,7 +38657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8184714867241878003}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.005_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38395,7 +38673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6755671856915495990}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_base_hair_tail.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38429,7 +38707,7 @@ GameObject:
   - component: {fileID: 7005096378268242610}
   - component: {fileID: 7673230679558948873}
   - component: {fileID: 7673230679558948874}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CyberHero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38468,14 +38746,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa984bf1d24d5314398c209f82bb98eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActiveTime: 2
-  MeshRefreshRate: 0.02
-  MeshDestroyDelay: 0.6
+  NumberOfTrails: 5
+  TrailLifespan: 0.5
   spawnPosition: {fileID: 423313537}
   mat: {fileID: 2100000, guid: 227acea8e76472248a32031150f356b7, type: 2}
   shaderVarRef: _Alpha
-  shaderVarRate: 0.1
-  shaderVarRefreshRate: 0.02
   newMaterials:
   - {fileID: 2100000, guid: 227acea8e76472248a32031150f356b7, type: 2}
   - {fileID: 2100000, guid: 227acea8e76472248a32031150f356b7, type: 2}
@@ -38539,7 +38814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3454560995456837970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_ik_target.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38555,7 +38830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6665822710238719655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38605,7 +38880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 128190211502238984}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38652,7 +38927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4262747218849502249}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-ROT-head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38765,7 +39040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2470463787712098827}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.004_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38798,7 +39073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6874890749069967203}
   - component: {fileID: 8078362707247917067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38814,7 +39089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4350629978160970323}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-hand_ik.parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38850,7 +39125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4514321065595991951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail_F.002.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38882,7 +39157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2807008905677001219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail_F.002.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38931,7 +39206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2997702869621800657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-spine.006_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39347,7 +39622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8914082347380991063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39363,7 +39638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4730193093873072336}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39379,7 +39654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7029422063138835041}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39395,7 +39670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3747646553777702569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VIS_upper_arm_ik_pole.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39411,7 +39686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1874215775342907571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39427,7 +39702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1772018185791402589}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_tweak.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39521,7 +39796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3670196500509894104}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39537,7 +39812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8277465606184733261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hair_tail.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39569,7 +39844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8459260938298832856}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-thigh.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39601,7 +39876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 430171678337264012}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_parent_widget.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39617,7 +39892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5841778031985693851}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_tweak.R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39649,7 +39924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7697210381938479841}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_ik_swing.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39698,7 +39973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3945691640225190774}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-heel.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39749,7 +40024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3189872990310775102}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_tweak.L.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39765,7 +40040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4797215396464904286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39781,7 +40056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4340601608639921909}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shin_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39813,7 +40088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2931816233627505624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-forearm_ik.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39877,7 +40152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1579353614720108964}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_parent.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39909,7 +40184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5762202271786987619}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39940,7 +40215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4434086422934972199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forearm_tweak.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39956,7 +40231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3448599482502584487}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-spine.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40020,7 +40295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6986622004558186424}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40036,7 +40311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1820182351771793046}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foot_tweak.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40100,7 +40375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1945845969831500139}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40132,7 +40407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8364121690580457396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40148,7 +40423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2500862703626829894}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.R.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40181,7 +40456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 910838933100138930}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_tweak.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40197,7 +40472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1512658917386405506}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_ik_target.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40229,7 +40504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 505329969275098445}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.002.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40245,7 +40520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3235322958167075498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-forearm_tweak.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40277,7 +40552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2054278313989117816}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hand.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40309,7 +40584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1266977527357411252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.004.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40392,7 +40667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8169930434990494646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-hair_tail.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40424,7 +40699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7240739333730639817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40440,7 +40715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5217252906924390930}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail_F.003.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40472,7 +40747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5061463790574948592}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.004.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40519,7 +40794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7312064555328482667}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_ik_target.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40535,7 +40810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4776617704577449422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-upper_arm.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40566,7 +40841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 757228371194950577}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_base_hair_tail_F.001.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40598,7 +40873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2561760211860620277}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ORG-hair_tail.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40646,7 +40921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3035833975433826408}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: upper_arm_parent.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40662,7 +40937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8789748788476495644}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_spine.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40678,7 +40953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6079963842756972924}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-thigh_ik_target.parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40726,7 +41001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8585807953325305042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-forearm_tweak.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40758,7 +41033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1764785791559640015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thigh_tweak.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40789,7 +41064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5884328811802746801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40805,7 +41080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7003640948105059759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tweak_hair_tail_F.001.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40821,7 +41096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4748232507363119411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-shin_ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40853,7 +41128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8018178546236448340}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MCH-upper_arm_ik_target.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40869,7 +41144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2099249425037232593}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-foot.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40885,7 +41160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1899972949661310387}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF-pelvis.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40901,7 +41176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 691109491551548431}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40917,7 +41192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 843520032895962726}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spine_fk.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40933,7 +41208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7174565457191885440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: toe_ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40979,7 +41254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6508689972775941654}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40995,7 +41270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8943312996530004481}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shoulder.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}

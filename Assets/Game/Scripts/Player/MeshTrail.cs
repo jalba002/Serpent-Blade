@@ -4,45 +4,33 @@ using UnityEngine;
 
 public class MeshTrail : MonoBehaviour
 {
-    public float ActiveTime = 2f;
+    public float NumberOfTrails = 5f;
+    public float TrailLifespan = 0.3f;
 
-    public float MeshRefreshRate = 0.1f;
-    public float MeshDestroyDelay = 0.3f;
-
-    private bool isTrailActive = false;
     private Coroutine TrailCoroutine;
     private SkinnedMeshRenderer[] skinnedMeshRenderers;
 
     public Transform spawnPosition;
     public Material mat;
     public string shaderVarRef;
-    public float shaderVarRate = 0.1f;
-    public float shaderVarRefreshRate = 0.01f;
 
     public Material[] newMaterials;
 
-    public void ActivateTrail()
+    public void ActivateTrail(float activeTime)
     {
-        isTrailActive = true;
-        TrailCoroutine = StartCoroutine(ActivateTrailCo());
+        TrailCoroutine = StartCoroutine(ActivateTrailCo(activeTime));
     }
 
-    public void DeactivateTrail()
+    IEnumerator ActivateTrailCo(float activeTime)
     {
-        isTrailActive = false;
-        StopCoroutine(TrailCoroutine);
-    }
-
-    IEnumerator ActivateTrailCo()
-    {
-        while (isTrailActive)
+        for (int i = 0; i < NumberOfTrails; i++)
         {
             if (skinnedMeshRenderers == null)
             {
                 skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
             }
 
-            for (int i = 0; i < skinnedMeshRenderers.Length; i++)
+            for (int j = 0; j < skinnedMeshRenderers.Length; j++)
             {
                 GameObject gObj = new GameObject();
                 gObj.transform.SetPositionAndRotation(spawnPosition.position, spawnPosition.rotation);
@@ -51,18 +39,18 @@ public class MeshTrail : MonoBehaviour
                 MeshFilter mf = gObj.AddComponent<MeshFilter>();
 
                 Mesh mesh = new Mesh();
-                skinnedMeshRenderers[i].BakeMesh(mesh);
+                skinnedMeshRenderers[j].BakeMesh(mesh);
 
                 mf.mesh = mesh;
                 mr.materials = newMaterials;
                 mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
-                StartCoroutine(AnimateMaterialFloat(mr.materials, MeshDestroyDelay));
+                StartCoroutine(AnimateMaterialFloat(mr.materials, TrailLifespan));
 
-                Destroy(gObj, MeshDestroyDelay);
+                Destroy(gObj, TrailLifespan);
             }
 
-            yield return new WaitForSeconds(MeshRefreshRate);
+            yield return new WaitForSeconds(activeTime / NumberOfTrails);
         }
     }
 
