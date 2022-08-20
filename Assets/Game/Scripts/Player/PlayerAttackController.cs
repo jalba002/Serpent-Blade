@@ -22,6 +22,11 @@ namespace Player
             shieldController = GetComponentInChildren<ShieldController>();
         }
 
+        private void Start()
+        {
+            shieldController.gameObject.SetActive(false);
+        }
+
         public void OnShield()
         {
             if (isAttacking) return;
