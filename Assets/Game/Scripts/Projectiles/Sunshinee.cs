@@ -32,7 +32,8 @@ namespace Projectiles
                     var go = Instantiate(projectilePrefab, center, Quaternion.identity);
                     go.transform.forward = direction;
                     go.transform.position += go.transform.right * (Mathf.Sin(Time.timeSinceLevelLoad) * sineAmplitude);
-                    go.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;
+                    go.GetComponent<Projectile>().Shoot(direction * projectileSpeed);
+                        //.velocity = direction * projectileSpeed;
                 }
 
                 i++;

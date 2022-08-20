@@ -25,6 +25,8 @@ public class BulletSpawnManager : MonoBehaviour
 
     public GameObject _debugParticlePrefab;
 
+    public BulletList bulletList;
+
     private void Awake()
     {
         Instance = this;
@@ -34,6 +36,16 @@ public class BulletSpawnManager : MonoBehaviour
     {
         Bullet a = Instantiate(prefab as GameObject, position, Quaternion.identity).GetComponent<Bullet>();
         a.InstantiateBullet(position);
+    }
+
+    public void SpawnBullet(UnityEngine.Object spawnPoint, string bulletPrefabName)
+    {
+        var spawnPos = ((GameObject)spawnPoint).transform.position;
+        // Search the bulletPrefab name.
+        var prefab = bulletList.GetBulletByName(bulletPrefabName);
+        
+        Bullet a = Instantiate(prefab, spawnPos, Quaternion.identity);
+        a.InstantiateBullet(spawnPos);
     }
 
     public void OnAttack()

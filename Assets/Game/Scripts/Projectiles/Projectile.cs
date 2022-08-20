@@ -5,18 +5,26 @@ using Mono.Cecil.Cil;
 using UnityEngine;
 
 [RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(Rigidbody))]
 public class Projectile : MonoBehaviour
 {
     private SphereCollider _collider;
+    private Rigidbody _rigidbody;
 
     private void Awake()
     {
         _collider = GetComponent<SphereCollider>();
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         // 
         Debug.Log($"Has hit {other.gameObject.name}");
+    }
+
+    public void Shoot(Vector3 vel)
+    {
+        _rigidbody.velocity = vel;
     }
 }
