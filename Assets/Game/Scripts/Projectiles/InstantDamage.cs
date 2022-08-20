@@ -13,7 +13,8 @@ public class InstantDamage : Bullet
         float duration = visualeffect.GetFloat("Duration");
         float area = visualeffect.GetFloat("Size");
         
-        DealDamageArea(center, area*2f);
+        SnapToGround();
+        DealDamageArea(transform.position, area*2f);
         Destroy(this.gameObject, duration*2f);
     }
 }
