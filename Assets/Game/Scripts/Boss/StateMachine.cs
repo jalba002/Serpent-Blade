@@ -67,12 +67,22 @@ namespace Boss
             _currentState?.Enter();
         }
 
+        public State GetCurrentState()
+        {
+            return _currentState;
+        }
+
         public void RequestSwitchState<StateClass>() where StateClass : State, new()
         {
             // Add the request to a queue and if it's ready to go, do it.
         }
 
         #region Data
+        
+        public void SetCurrentWaitTime(float time)
+        {
+            _bossController.SetCurrentWaitTime(time);
+        }
 
         public void AddOverload(float amount)
         {
@@ -107,6 +117,11 @@ namespace Boss
         public void SetAnimationTrigger(string name)
         {
             _animator.SetTrigger(name);
+        }
+
+        public void ResetAnimationTrigger(string name)
+        {
+            _animator.ResetTrigger(name);
         }
 
         #endregion

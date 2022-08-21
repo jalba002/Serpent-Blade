@@ -27,7 +27,7 @@ public class ElectricShout : State
             if (animationFinished)
             {
                 _stateMachine.SwitchState<Idle>();
-                Debug.Log("Ray finished and going idle.");
+                //Debug.Log("Ray finished and going idle.");
             }
         }
     }

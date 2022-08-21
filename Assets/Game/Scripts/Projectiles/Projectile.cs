@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // 
-        Debug.Log($"Has hit {other.gameObject.name}");
+        // Debug.Log($"Has hit {other.gameObject.name}");
 
         if (other.tag == "Player")
         {

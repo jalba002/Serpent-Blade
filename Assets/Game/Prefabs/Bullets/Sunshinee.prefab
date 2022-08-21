@@ -50,12 +50,12 @@ MonoBehaviour:
   raycastDistance: 10
   damage: 10
   spawnPrefab: 1
-  projectilePrefab: {fileID: 1372065240479105922, guid: d037dbef14e372745b94431a63d8be20,
+  projectilePrefab: {fileID: 1372065240479105922, guid: ce2342d64ba73df4a956ce53fd39f92d,
     type: 3}
   drawSphere: 0
   IsStopped: 0
-  sineAmplitude: 8
+  sineAmplitude: 4
   sides: 8
-  delayBetweenWaves: 0.15
-  waves: 24
-  projectileSpeed: 10
+  delayBetweenWaves: 0.17
+  waves: 16
+  projectileSpeed: 16

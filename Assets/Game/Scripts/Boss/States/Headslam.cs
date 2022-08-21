@@ -27,6 +27,7 @@ namespace Boss
             if (stateTimeToExit <= Time.timeSinceLevelLoad)
             {
                 // time to change state.
+                _stateMachine.SetAnimationTrigger("Headslam Recover");
                 _stateMachine.SwitchState<Idle>();
             }
         }
@@ -34,12 +35,12 @@ namespace Boss
         protected override void OnStateEnter()
         {
             _stateMachine.SetAnimationTrigger("Headslam");
+            //_stateMachine.ResetAnimationTrigger("Headslam Recover");
             _stateMachine.SetRotationSpeed(_attackData.attackRotationSpeed);
         }
 
         protected override void OnStateExit()
         {
-            _stateMachine.SetAnimationTrigger("Headslam Recover");
             _stateMachine.SetDefaultRotationSpeed();
         }
     }
