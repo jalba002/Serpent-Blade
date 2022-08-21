@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,7 +20,6 @@ namespace Player
         private Vector2 direction;
         private Vector2 dashDirection;
         private Vector3 movement;
-        private Vector3 platformMovement;
         private float currentSpeed;
 
         public Animator animator;
@@ -30,11 +30,15 @@ namespace Player
         public Transform ArenaCenter;
 
         public PlayerMovementData MovementData;
+        private MeshTrail meshTrail;
+
+        public StudioEventEmitter dashEventEmitter;
 
         private void Awake()
         {
             controller = GetComponent<CharacterController>();
             animator = GetComponentInChildren<Animator>();
+            meshTrail = GetComponentInChildren<MeshTrail>();
         }
 
         private void Start()
@@ -72,6 +76,8 @@ namespace Player
                 movement.Normalize();
                 movement *= currentSpeed;
             }
+
+            movement.y = -1f;
 
             controller.Move(movement * Time.deltaTime);
 
@@ -137,11 +143,14 @@ namespace Player
                 {
                     dashDirection = direction;
                 }
+
+                dashEventEmitter.Play();
             }
         }
 
         IEnumerator DashCoroutine(float duration)
         {
+            meshTrail.ActivateTrail(duration);
             yield return new WaitForSeconds(duration);
             ChangeState(PlayerStates.Standing);
         }

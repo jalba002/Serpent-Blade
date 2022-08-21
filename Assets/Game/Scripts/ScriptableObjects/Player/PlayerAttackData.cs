@@ -13,5 +13,5 @@ public class PlayerAttackData : ScriptableObject
     public float StartPctTime = 0.0f;
     public float EndPctTime = 0.0f;
 
-    public float AttackDamage = 1f;
+    public float Damage = 1f;
 }

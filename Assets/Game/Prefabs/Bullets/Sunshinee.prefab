@@ -44,9 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13539ba10f3d68c4e9e50b20466750d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raycastHitLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  raycastDistance: 10
+  damage: 10
   spawnPrefab: 1
   projectilePrefab: {fileID: 1372065240479105922, guid: d037dbef14e372745b94431a63d8be20,
     type: 3}
+  drawSphere: 0
+  IsStopped: 0
   sineAmplitude: 8
   sides: 8
   delayBetweenWaves: 0.15

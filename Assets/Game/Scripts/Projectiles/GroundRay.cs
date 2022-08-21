@@ -7,7 +7,6 @@ using UnityEngine.VFX;
 
 public class GroundRay : Bullet
 {
-    private bool drawSphere = false;
     private Vector3 spawnPoint;
     private float ringSize;
     public override void InstantiateBullet(Vector3 center)
@@ -23,18 +22,11 @@ public class GroundRay : Bullet
     IEnumerator ShockGround(float delay, float maxLifetime)
     {
         yield return new WaitForSeconds(delay);
-        DealDamageArea();
+        DealDamageArea(spawnPoint, ringSize);
         drawSphere = true;
         Destroy(this.gameObject, maxLifetime * 2f);
     }
-
-    private void DealDamageArea()
-    {
-        // 
-        var hitTargets =Physics.OverlapSphere(spawnPoint, ringSize * 0.5f);
-        // Find the player and deal damage to it.
-    }
-
+    
     private void OnDrawGizmos()
     {
         if (!drawSphere) return;
