@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 using Object = UnityEngine.Object;
 
 namespace Boss
@@ -19,6 +20,7 @@ namespace Boss
         //     BulletSpawnManager.Instance.SpawnBullet(prefab, _defaultSpawnPoint.position);
         // }
 
+        [SerializeField] private LaserBeamScript laserBeam;
        
         public Transform bossParent { get; private set; }
         
@@ -68,13 +70,28 @@ namespace Boss
             {
                 // Apply headslam animation
                 //_animator.SetTrigger("Headslam");
-                _stateMachine.SwitchState<Headslam>();
+                //_stateMachine.SwitchState<Sunshine>();
+            }
+            if (GUILayout.Button("Laser Beam"))
+            {
+                // Apply headslam animation
+                //_animator.SetTrigger("Headslam");
+                _stateMachine.SwitchState<LaserBeam>();
             }
         }
 
-        public void LaserUp()
+        public void ToggleLaser(int enable)
         {
             // find the particle and call it to start shooting.
+            //if positive, go, if 0 or negative. Stop.
+            if (enable >= 1)
+            {
+                laserBeam.Shoot();
+            }
+            else
+            {
+                laserBeam.Stop();
+            }
         }
     }
 }
