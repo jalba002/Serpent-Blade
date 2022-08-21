@@ -45,6 +45,7 @@ namespace Player
             NextShieldTime = Time.time + ShieldCooldown;
             shieldController.gameObject.SetActive(true);
             animator.SetTrigger("Block");
+            BlockEventEmitter.Play();
         }
 
         public void OnAttack()
@@ -73,7 +74,15 @@ namespace Player
 
             switch (attackCombo)
             {
-
+                case 2:
+                    Attack1EventEmitter.Play();
+                    break;
+                case 3:
+                    Attack2EventEmitter.Play();
+                    break;
+                case 4:
+                    Attack3EventEmitter.Play();
+                    break;
             }
         }
 
