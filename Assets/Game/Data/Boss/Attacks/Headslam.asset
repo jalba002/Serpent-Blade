@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Headslam
   m_EditorClassIdentifier: 
   animationSpeed: 1
-  waitTime: 0
+  waitTime: 1
   stateDuration: 3
   attackRotationSpeed: 0
-  overloadAmount: 50
+  overloadAmount: 3

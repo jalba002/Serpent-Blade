@@ -95,7 +95,7 @@ namespace Boss
 
             if (GUILayout.Button("Sunshine"))
             {
-                //_stateMachine.SwitchState<Sunshine>();
+                _stateMachine.SwitchState<Sunshine>();
             }
 
             if (GUILayout.Button("Laser Beam"))
@@ -115,6 +115,11 @@ namespace Boss
             if (GUILayout.Button("Entrada"))
             {
                 _stateMachine.SwitchState<Entrance>();
+            }
+
+            if (GUILayout.Button("Stunned"))
+            {
+                _stateMachine.SwitchState<Stunned>();
             }
         }
 

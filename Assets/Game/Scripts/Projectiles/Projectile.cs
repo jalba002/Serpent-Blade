@@ -11,6 +11,12 @@ public class Projectile : MonoBehaviour
     private SphereCollider _collider;
     private Rigidbody _rigidbody;
 
+    [Header("Projectile settings")] [SerializeField]
+    protected float playerDamage = 20f;
+
+    [SerializeField] protected float bossDamage = 35f;
+    [SerializeField] protected float maxDuration = 20f;
+
     [Header("Deflect Settings")]
     [SerializeField] protected bool canBeDeflected = false;
     [SerializeField] protected float deflectedMultiplier = 2f;
@@ -21,10 +27,10 @@ public class Projectile : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Start()
-    {
-        _rigidbody.velocity = transform.forward * 5f;
-    }
+    // private void Start()
+    // {
+    //     _rigidbody.velocity = transform.forward ;
+    // }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,12 +39,20 @@ public class Projectile : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            other.GetComponent<PlayerHealthManager>().DecreaseHealth(20f);
+            other.GetComponent<PlayerHealthManager>().DecreaseHealth(playerDamage);
+            Destroy(this.gameObject);
         }
 
         if (other.tag == "PlayerShield")
         {
-            ReturnProjectile();
+            if(canBeDeflected)
+                ReturnProjectile();
+        }
+
+        if (other.tag == "Boss" && gameObject.tag == "PlayerDeflectedAttack")
+        {
+            other.GetComponentInParent<BossHealthManager>().DecreaseHealth(bossDamage);
+            Destroy(this.gameObject);
         }
     }
 
@@ -47,9 +61,20 @@ public class Projectile : MonoBehaviour
         _rigidbody.velocity = vel;
     }
 
-    public void ReturnProjectile()
+    void ReturnProjectile()
     {
         _rigidbody.velocity = -_rigidbody.velocity * deflectedMultiplier;
         tag = "PlayerDeflectedAttack";
+    }
+
+    IEnumerator DestroyCoroutine()
+    {
+        yield return new WaitForSeconds(maxDuration);
+        Destroy(this.gameObject);
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
     }
 }
