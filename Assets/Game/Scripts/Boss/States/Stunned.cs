@@ -7,11 +7,13 @@ using Debug = UnityEngine.Debug;
 
 public class Stunned : State
 {
-    private float timeToExit;
+    private float stateTimeToExit;
+    private bool waitForFall = true;
     protected override void OnStateInitialize()
     {
         _attackData = _stateMachine.GetAttackData("Stunned");
-        timeToExit = _attackData.stateDuration + Time.timeSinceLevelLoad;
+        stateTimeToExit = _attackData.stateDuration + Time.timeSinceLevelLoad;
+        waitForFall = true;
     }
 
     protected override void OnStateUpdate(float deltaTime)
@@ -26,8 +28,16 @@ public class Stunned : State
 
     protected override void OnStateCheckTransition()
     {
-        if (timeToExit <= Time.timeSinceLevelLoad)
+        if (animationFinished && waitForFall)
         {
+            stateTimeToExit = Time.timeSinceLevelLoad+_attackData.stateDuration;
+            animationFinished = false;
+            waitForFall = false;
+        }
+        else if (stateTimeToExit <= Time.timeSinceLevelLoad)
+        {
+            // time to change state.
+            _stateMachine.SetAnimationTrigger("Stun Recovery");
             _stateMachine.SwitchState<Idle>();
         }
     }
@@ -40,7 +50,6 @@ public class Stunned : State
 
     protected override void OnStateExit()
     {
-        _stateMachine.SetAnimationTrigger("Stun Recovery");
         _stateMachine.SetDefaultRotationSpeed();
     }
 }

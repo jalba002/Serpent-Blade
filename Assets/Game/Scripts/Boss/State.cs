@@ -15,9 +15,6 @@ namespace Boss
         {
             _stateMachine = stateMachine;
             OnStateInitialize();
-            
-            if(_attackData != null)
-                _stateMachine.SetCurrentWaitTime(_attackData.waitTime);
         }
 
         public void Update(float dt)
@@ -43,8 +40,11 @@ namespace Boss
         public void Exit()
         { 
             OnStateExit();
-            if(_attackData != null)
+            if (_attackData != null)
+            {
                 _stateMachine.AddOverload(_attackData.overloadAmount);
+                _stateMachine.SetCurrentWaitTime(_attackData.waitTime);
+            }
         }
 
         protected abstract void OnStateInitialize();
