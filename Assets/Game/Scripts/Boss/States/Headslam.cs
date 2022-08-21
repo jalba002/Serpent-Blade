@@ -12,6 +12,7 @@ namespace Boss
         {
             _attackData = GetAttackData("Headslam");
             stateTimeToExit = Time.timeSinceLevelLoad+_attackData.stateDuration;
+            Debug.Log(Time.timeSinceLevelLoad + "/" + stateTimeToExit);
         }
 
         protected override void OnStateUpdate(float deltaTime)
@@ -34,11 +35,13 @@ namespace Boss
         protected override void OnStateEnter()
         {
             _stateMachine.SetAnimationTrigger("Headslam");
+            _stateMachine.SetRotationSpeed(_attackData.attackRotationSpeed);
         }
 
         protected override void OnStateExit()
         {
             _stateMachine.SetAnimationTrigger("Headslam Recover");
+            _stateMachine.SetDefaultRotationSpeed();
         }
     }
 }

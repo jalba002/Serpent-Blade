@@ -20,4 +20,9 @@ public class AttackData : ScriptableObject
     /// State duration in seconds. If negative, the animation duration is done. Anyway, state transitions.
     /// </summary>
     public float stateDuration = -1f;
+
+    /// <summary>
+    /// Rotation speed of the creature during the attack.
+    /// </summary>
+    public float attackRotationSpeed = 0f;
 }
