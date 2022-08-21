@@ -15,6 +15,9 @@ namespace Boss
         {
             _stateMachine = stateMachine;
             OnStateInitialize();
+            
+            if(_attackData != null)
+                _stateMachine.SetCurrentWaitTime(_attackData.waitTime);
         }
 
         public void Update(float dt)

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationSpeed: 1
   waitTime: 0
-  stateDuration: 7
+  stateDuration: 6
   attackRotationSpeed: 0
   overloadAmount: 0
