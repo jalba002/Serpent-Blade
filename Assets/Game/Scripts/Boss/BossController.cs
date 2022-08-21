@@ -32,6 +32,11 @@ namespace Boss
         public float startingRotationSpeed = 180f;
         private float currentRotationSpeed;
 
+        public float maximumOverload = 50f;
+        private float currentOverload = 0f;
+
+        private bool SetToBeStunned = false;
+
         private void Awake()
         {
             _archnemesis = FindObjectOfType<PlayerAttackController>();
@@ -125,6 +130,24 @@ namespace Boss
             {
                 laserBeam.Stop();
             }
+        }
+
+        public void AddOverload(float amount)
+        {
+            if (amount <= 0) return;
+
+            if (currentOverload >= maximumOverload) return;
+
+            currentOverload = Mathf.Min(currentOverload + amount, maximumOverload);
+            CheckOverload();
+        }
+
+        public void CheckOverload()
+        {
+            if (currentOverload < maximumOverload) return;
+
+            SetToBeStunned = true;
+            currentOverload = 0f;
         }
 
         public void ShowcaseLaser()

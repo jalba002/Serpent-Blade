@@ -24,7 +24,7 @@ public class LightningRays : State
 
     protected override void OnStateCheckTransition()
     {
-        if (timeToBackScene <= Time.timeSinceLevelLoad)
+        if (timeToBackScene <= Time.timeSinceLevelLoad || animationFinished)
         {
             _stateMachine.SwitchState<Idle>();
         }
@@ -34,11 +34,14 @@ public class LightningRays : State
     {
         // 
         _stateMachine.SetAnimationTrigger("High Shout");   
+        _stateMachine.SetRotationSpeed(_attackData.attackRotationSpeed);
     }
 
     protected override void OnStateExit()
     {
         // Idk
         Debug.Log("Exiting Lightning Rays");
+        _stateMachine.SetDefaultRotationSpeed();
+
     }
 }

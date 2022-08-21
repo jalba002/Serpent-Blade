@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Cinemachine;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace Boss
 {
@@ -55,6 +57,10 @@ namespace Boss
 
         public void SwitchState<StateClass>() where StateClass : State, new()
         {
+            if(_currentState != null)
+                Debug.Log($"{_currentState.GetType().ToString()} to {typeof(StateClass)}");
+            
+            if (_currentState != null && _currentState.GetType() == typeof(StateClass)) return;
             _currentState?.Exit();
             _currentState = new StateClass();
             _currentState?.Initialize(this);
@@ -67,6 +73,11 @@ namespace Boss
         }
 
         #region Data
+
+        public void AddOverload(float amount)
+        {
+            _bossController.AddOverload(amount);
+        }
 
         public void SetStateAnimFinished()
         {

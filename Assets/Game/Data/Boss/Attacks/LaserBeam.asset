@@ -16,3 +16,4 @@ MonoBehaviour:
   waitTime: 3
   stateDuration: 4.5
   attackRotationSpeed: 10
+  overloadAmount: 10
