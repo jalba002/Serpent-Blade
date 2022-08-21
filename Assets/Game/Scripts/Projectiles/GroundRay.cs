@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,6 +10,13 @@ public class GroundRay : Bullet
 {
     private Vector3 spawnPoint;
     private float ringSize;
+    private StudioEventEmitter audioRef;
+
+    private void Awake()
+    {
+        audioRef = GetComponent<StudioEventEmitter>();
+    }
+
     public override void InstantiateBullet(Vector3 center)
     {
         spawnPoint = center;
@@ -24,6 +32,7 @@ public class GroundRay : Bullet
         yield return new WaitForSeconds(delay);
         DealDamageArea(spawnPoint, ringSize);
         drawSphere = true;
+        audioRef.Play();
         Destroy(this.gameObject, maxLifetime * 2f);
     }
     

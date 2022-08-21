@@ -18,7 +18,7 @@ public class BossSoundPlayer : MonoBehaviour
 
     public void PlaySpawnSound()
     {
-        //spawnAudioRef.Play();
+        soundList.spawnAudioRef.Play();
     }
 
     public void PlayScreamSound()
@@ -43,11 +43,21 @@ public class BossSoundPlayer : MonoBehaviour
 
     public void PlayDechargeSound()
     {
-        //spawnAudioRef.Play();
+        soundList.dechargeAudioRef.Play();
     }
 
     public void PlayChargeSound()
     {
-        //spawnAudioRef.Play();
+        soundList.chargeAudioRef.Play();
+    }
+
+    public void PlayHeadSlamSound()
+    {
+        soundList.headSlamAudioRef.Play();
+    }
+
+    public void PlayDeathScreamSound()
+    {
+        soundList.deathScreamAudioRef.Play();
     }
 }

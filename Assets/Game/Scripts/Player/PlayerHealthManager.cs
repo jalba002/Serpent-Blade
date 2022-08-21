@@ -44,6 +44,7 @@ public class PlayerHealthManager : HealthManager
         inputs.DisableInputs();
         StartCoroutine(DeathCoroutine());
         animator.SetTrigger("Death");
+        SetInvulnerableState(true);
     }
 
     public override void DamageFeedback()

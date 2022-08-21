@@ -21,6 +21,7 @@ public class BossHealthManager : HealthManager
     public override void Die()
     {
         UpdateHealthBarMaterial();
+
     }
 
     public override void DamageFeedback()
