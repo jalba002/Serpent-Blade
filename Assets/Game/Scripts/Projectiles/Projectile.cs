@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
 
         if (other.tag == "Player")
         {
-
+            
         }
 
         if (other.tag == "PlayerShield")

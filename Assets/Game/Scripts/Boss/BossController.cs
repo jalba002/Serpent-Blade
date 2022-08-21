@@ -85,30 +85,31 @@ namespace Boss
 
             if (GUILayout.Button("Scream"))
             {
-                // Apply headslam animation
-                //_animator.SetTrigger("Headslam");
                 _stateMachine.SwitchState<Scream>();
             }
 
             if (GUILayout.Button("Sunshine"))
             {
-                // Apply headslam animation
-                //_animator.SetTrigger("Headslam");
                 //_stateMachine.SwitchState<Sunshine>();
             }
 
             if (GUILayout.Button("Laser Beam"))
             {
-                // Apply headslam animation
-                //_animator.SetTrigger("Headslam");
                 _stateMachine.SwitchState<LaserBeam>();
             }
             
             if (GUILayout.Button("Laser Scream"))
             {
-                // Apply headslam animation
-                //_animator.SetTrigger("Headslam");
                 _stateMachine.SwitchState<LaserScream>();
+            }
+            
+            if (GUILayout.Button("Electric Shout"))
+            {
+                _stateMachine.SwitchState<ElectricShout>();
+            }
+            if (GUILayout.Button("Entrada"))
+            {
+                _stateMachine.SwitchState<Entrance>();
             }
         }
 
@@ -149,6 +150,11 @@ namespace Boss
         public float GetRotationSpeed()
         {
             return currentRotationSpeed;
+        }
+
+        public void SetStateAnimFinished()
+        {
+            _stateMachine.SetStateAnimFinished();
         }
     }
 }

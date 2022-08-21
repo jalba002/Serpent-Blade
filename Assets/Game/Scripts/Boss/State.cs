@@ -9,7 +9,7 @@ namespace Boss
     {
         protected StateMachine _stateMachine;
         protected AttackData _attackData;
-        public bool finished = false;
+        public bool animationFinished = false;
 
         public void Initialize(StateMachine stateMachine)
         {

@@ -12,7 +12,6 @@ namespace Boss
         {
             _attackData = GetAttackData("Headslam");
             stateTimeToExit = Time.timeSinceLevelLoad+_attackData.stateDuration;
-            Debug.Log(Time.timeSinceLevelLoad + "/" + stateTimeToExit);
         }
 
         protected override void OnStateUpdate(float deltaTime)

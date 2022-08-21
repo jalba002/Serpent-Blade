@@ -27,7 +27,6 @@ public class Idle : State
 
     protected override void OnStateEnter()
     {
-        Debug.Log("Boss is idling");
     }
 
     protected override void OnStateExit()
