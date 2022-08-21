@@ -55,4 +55,5 @@ MonoBehaviour:
   drawSphere: 0
   IsStopped: 0
   spellDuration: 10
-  delayBetweenRays: 1
+  delayBetweenRays: 0.5
+  predictionScale: 2

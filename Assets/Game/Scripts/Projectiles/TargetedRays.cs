@@ -7,7 +7,7 @@ public class TargetedRays : Bullet
 {
     public float spellDuration = 10f;
     public float delayBetweenRays = 0.5f;
-
+    public float predictionScale = 0.5f;
     private IEnumerator raySpawner;
     public override void InstantiateBullet(Vector3 center)
     {
@@ -22,7 +22,7 @@ public class TargetedRays : Bullet
         PlayerAttackController player = FindObjectOfType<PlayerAttackController>();
         while (projectiles > 0)
         {
-            Vector3 playerPos = player.transform.position;
+            Vector3 playerPos = player.transform.position + player.transform.forward * predictionScale;
             var a = Instantiate(projectilePrefab, playerPos, Quaternion.identity);
             a.GetComponent<Bullet>().InstantiateBullet(playerPos);
             projectiles--;
