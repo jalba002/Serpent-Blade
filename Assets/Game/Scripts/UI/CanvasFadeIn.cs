@@ -7,10 +7,22 @@ public class CanvasFadeIn : MonoBehaviour
     public float DelayFadeIn = 0f;
     public float DelayFadeOut = 0f;
     private CanvasGroup canvGroup;
+    public bool StartWithFadeOut;
 
     public void Awake()
     {
         canvGroup = GetComponent<CanvasGroup>();
+    }
+
+    private void Start()
+    {
+        if (StartWithFadeOut)
+        {
+            canvGroup.alpha = 1f;
+            canvGroup.interactable = false;
+            canvGroup.blocksRaycasts = false;
+            FadeOut();
+        }
     }
 
     public void FadeIn()

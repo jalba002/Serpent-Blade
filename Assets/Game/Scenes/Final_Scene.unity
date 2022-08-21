@@ -9614,7 +9614,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488017578}
-  m_LocalRotation: {x: 0.24661352, y: -0.000000018643153, z: 0.000000004744182, w: 0.96911395}
+  m_LocalRotation: {x: 0.24661352, y: 0.000000018643153, z: -0.000000004744182, w: 0.96911395}
   m_LocalPosition: {x: 0, y: 13.245, z: -21.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9781,7 +9781,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh165988
+  m_Name: pb_Mesh376360
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10535,6 +10535,7 @@ MonoBehaviour:
   Duration: 0.4
   DelayFadeIn: 0
   DelayFadeOut: 0
+  StartWithFadeOut: 0
 --- !u!225 &744909081
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -20767,6 +20768,7 @@ MonoBehaviour:
   Duration: 0.2
   DelayFadeIn: 0
   DelayFadeOut: 0
+  StartWithFadeOut: 0
 --- !u!225 &1353604525
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -21134,7 +21136,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh166324
+  m_Name: pb_Mesh376696
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21307,7 +21309,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1450855538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c6eb86c0d32844d9e7f6e0a81685ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 884421936e335b4419518f3b4b87a18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1466018809
@@ -31198,7 +31200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1525179823
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31270,8 +31272,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 0.4
-  DelayFadeIn: 0
-  DelayFadeOut: 0
+  DelayFadeIn: 0.5
+  DelayFadeOut: 0.5
+  StartWithFadeOut: 1
 --- !u!225 &1525179827
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -31280,9 +31283,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525179822}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1526877183 stripped
 GameObject:
@@ -31914,7 +31917,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707611761}
-  m_LocalRotation: {x: 0.24661352, y: -0.000000018643153, z: 0.000000004744182, w: 0.96911395}
+  m_LocalRotation: {x: 0.24661352, y: 0.000000018643153, z: -0.000000004744182, w: 0.96911395}
   m_LocalPosition: {x: 0, y: 13.245, z: -21.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33005,6 +33008,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1864471327}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &1884985826 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8702078621632419933, guid: 4da29f8a146fb5b498c880fb0c126cba,
+    type: 3}
+  m_PrefabInstance: {fileID: 2137623339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1906229672
 GameObject:
   m_ObjectHideFlags: 0
@@ -33496,6 +33505,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985125887}
   m_CullTransparentMesh: 1
+--- !u!95 &1996921839 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8015691803382050956, guid: 22c8e919190bc324ab6751e749effc1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8015691803257504897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2046511567
 GameObject:
   m_ObjectHideFlags: 0
@@ -34835,6 +34850,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.339058
       objectReference: {fileID: 0}
+    - target: {fileID: 5651729781471526035, guid: 4da29f8a146fb5b498c880fb0c126cba,
+        type: 3}
+      propertyPath: NeonHealthBarRenderer
+      value: 
+      objectReference: {fileID: 2137623342}
     - target: {fileID: 5660181729876632152, guid: 4da29f8a146fb5b498c880fb0c126cba,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -35127,6 +35147,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4da29f8a146fb5b498c880fb0c126cba, type: 3}
+--- !u!1 &2137623340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3847656589819053339, guid: 4da29f8a146fb5b498c880fb0c126cba,
+    type: 3}
+  m_PrefabInstance: {fileID: 2137623339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2137623341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137623340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d60409603d4de4b8b4b06417d756f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RechargeDuration: 7
+  NeonHealthBarRenderer: {fileID: 1884985826}
+--- !u!23 &2137623342 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3343187391567415194, guid: 4da29f8a146fb5b498c880fb0c126cba,
+    type: 3}
+  m_PrefabInstance: {fileID: 2137623339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8015691803257504897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35151,9 +35197,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8015691803478745503, guid: 22c8e919190bc324ab6751e749effc1b,
         type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1996921839}
+    - target: {fileID: 8015691803478745503, guid: 22c8e919190bc324ab6751e749effc1b,
+        type: 3}
       propertyPath: HealthSlider
       value: 
       objectReference: {fileID: 1612926381}
+    - target: {fileID: 8015691803478745503, guid: 22c8e919190bc324ab6751e749effc1b,
+        type: 3}
+      propertyPath: LoadingScreen
+      value: 
+      objectReference: {fileID: 1525179826}
     - target: {fileID: 8015691803478745503, guid: 22c8e919190bc324ab6751e749effc1b,
         type: 3}
       propertyPath: mainCameraShake

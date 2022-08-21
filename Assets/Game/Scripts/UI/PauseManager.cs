@@ -10,13 +10,13 @@ public class PauseManager : MonoBehaviour
     private CanvasFadeIn canvasFade;
 
     public static PauseManager Instance;
-    PauseMenuInputs playerMenuInputs;
+    PlayerInputsManager playerMenuInputs;
 
     private void Awake()
     {
         Instance = this;
         canvasFade = GetComponent<CanvasFadeIn>();
-        playerMenuInputs = FindObjectOfType<PauseMenuInputs>();
+        playerMenuInputs = FindObjectOfType<PlayerInputsManager>();
     }
 
     public void Resume()

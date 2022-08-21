@@ -46,8 +46,6 @@ public class CameraMovement : MonoBehaviour
         currentCameraAngle = Mathf.LerpAngle(currentCameraAngle, angle, Time.deltaTime * CameraHorizontalLerpSpeed);
         virtualCameraOrbitalTransposer.m_Heading.m_Bias = currentCameraAngle;
 
-        Debug.Log(distance.magnitude);
-
         var targetOffset = Mathf.Lerp(MinZoom, MaxZoom, (distance.magnitude - 10.8f) / 13.5f);
         followOffset.z = Mathf.Lerp(followOffset.z, targetOffset, Time.deltaTime * CameraVerticalLerpSpeed);
         virtualCameraOrbitalTransposer.m_FollowOffset = followOffset;
