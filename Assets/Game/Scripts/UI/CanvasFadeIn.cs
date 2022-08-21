@@ -4,7 +4,8 @@ using UnityEngine;
 public class CanvasFadeIn : MonoBehaviour
 {
     public float Duration = 0.4f;
-    public float Delay = 0f;
+    public float DelayFadeIn = 0f;
+    public float DelayFadeOut = 0f;
     private CanvasGroup canvGroup;
 
     public void Awake()
@@ -14,25 +15,22 @@ public class CanvasFadeIn : MonoBehaviour
 
     public void FadeIn()
     {
-        StartCoroutine(DoFade(canvGroup, canvGroup.alpha, 1));
+        StartCoroutine(DoFade(canvGroup, canvGroup.alpha, 1, DelayFadeIn));
     }
 
     public void FadeOut()
     {
-        StartCoroutine(DoFade(canvGroup, canvGroup.alpha, 0));
+        StartCoroutine(DoFade(canvGroup, canvGroup.alpha, 0, DelayFadeOut));
     }
 
-    public IEnumerator DoFade(CanvasGroup canvGroup, float start, float end)
+    public IEnumerator DoFade(CanvasGroup canvGroup, float start, float end, float delay)
     {
         float counter = 0f;
-
-        yield return new WaitForSeconds(Delay);
 
         if(end == 1)
         {
             canvGroup.interactable = true;
             canvGroup.blocksRaycasts = true;
-            yield return new WaitForSeconds(0.7f);
         }
         else
         {
@@ -40,11 +38,11 @@ public class CanvasFadeIn : MonoBehaviour
             canvGroup.blocksRaycasts = false;
         }
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSecondsRealtime(delay);
 
         while (counter < Duration)
         {
-            counter += Time.deltaTime;
+            counter += Time.unscaledDeltaTime;
             canvGroup.alpha = Mathf.Lerp(start, end, counter / Duration);
 
             yield return null;
