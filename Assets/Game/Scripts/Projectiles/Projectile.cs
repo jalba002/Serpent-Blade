@@ -21,10 +21,25 @@ public class Projectile : MonoBehaviour
     {
         // 
         Debug.Log($"Has hit {other.gameObject.name}");
+
+        if (other.tag == "Player")
+        {
+
+        }
+
+        if (other.tag == "PlayerShield")
+        {
+
+        }
     }
 
     public void Shoot(Vector3 vel)
     {
         _rigidbody.velocity = vel;
+    }
+
+    public void ReturnBullet()
+    {
+
     }
 }
