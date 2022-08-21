@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.VFX;
 using Object = UnityEngine.Object;
@@ -27,9 +28,24 @@ namespace Boss
         [SerializeField]
         private List<Transform> bossBones;
 
+        private PlayerAttackController _archnemesis;
+
+        public float startingRotationSpeed = 180f;
+        private float currentRotationSpeed;
+
         private void Awake()
         {
             bossParent = GetComponentInParent<Transform>();
+            _archnemesis = FindObjectOfType<PlayerAttackController>();
+            // If not found, try again later?
+        }
+
+        public void Update()
+        {
+            // Rotate slowly towards player. Let users configure speed.
+            Vector3 playerDirection = _archnemesis.transform.position - transform.position;
+            playerDirection.y = 0f;
+            bossParent.transform.rotation = Quaternion.Lerp(bossParent.transform.rotation, Quaternion.LookRotation(playerDirection), currentRotationSpeed);
         }
 
         public void StorePosition(Object spawnPoint)
