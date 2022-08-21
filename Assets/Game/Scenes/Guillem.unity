@@ -8369,10 +8369,15 @@ GameObject:
   m_Component:
   - component: {fileID: 423313537}
   - component: {fileID: 423313536}
-  - component: {fileID: 423313538}
   - component: {fileID: 423313539}
+  - component: {fileID: 423313538}
   - component: {fileID: 423313540}
   - component: {fileID: 423313541}
+  - component: {fileID: 423313546}
+  - component: {fileID: 423313545}
+  - component: {fileID: 423313544}
+  - component: {fileID: 423313543}
+  - component: {fileID: 423313542}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -8430,6 +8435,7 @@ MonoBehaviour:
   animator: {fileID: 7673230679558948873}
   ArenaCenter: {fileID: 1363794937}
   MovementData: {fileID: 11400000, guid: f1a8b2acfa472c44697adce9dbdf80e7, type: 2}
+  dashEventEmitter: {fileID: 423313546}
 --- !u!114 &423313539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8480,6 +8486,10 @@ MonoBehaviour:
   isAttacking: 0
   ShieldCooldown: 2
   NextShieldTime: 0
+  BlockEventEmitter: {fileID: 423313545}
+  Attack1EventEmitter: {fileID: 423313544}
+  Attack2EventEmitter: {fileID: 423313543}
+  Attack3EventEmitter: {fileID: 423313542}
 --- !u!114 &423313541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8497,6 +8507,156 @@ MonoBehaviour:
   mainCameraShake: {fileID: 1707611765}
   CameraShakeDuration: 0.15
   CameraShakeIntensity: 5
+--- !u!114 &423313542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423313535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1944635778
+      Data2: 1163241340
+      Data3: 466160294
+      Data4: -1205893638
+    Path: event:/SFX/Player/Player Attack - 03
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &423313543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423313535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -746270975
+      Data2: 1193604468
+      Data3: 20061598
+      Data4: 1720012731
+    Path: event:/SFX/Player/Player Attack - 02
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &423313544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423313535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1058706025
+      Data2: 1228842147
+      Data3: -832201808
+      Data4: -2064485256
+    Path: event:/SFX/Player/Player Attack - 01
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &423313545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423313535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1274740268
+      Data2: 1147802836
+      Data3: -501419879
+      Data4: -1423715289
+    Path: event:/SFX/Player/Escudo
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &423313546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423313535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1463310488
+      Data2: 1156176387
+      Data3: -2136686452
+      Data4: -1421489196
+    Path: event:/SFX/Player/Dash
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &488017578
 GameObject:
   m_ObjectHideFlags: 0
@@ -8575,7 +8735,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488017578}
-  m_LocalRotation: {x: 0.24661352, y: 0.000000018643153, z: -0.000000004744182, w: 0.96911395}
+  m_LocalRotation: {x: 0.24661352, y: -0.000000018643153, z: 0.000000004744182, w: 0.96911395}
   m_LocalPosition: {x: 0, y: 13.245, z: -21.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8788,7 +8948,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh64168
+  m_Name: pb_Mesh180758
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17053,16 +17213,46 @@ PrefabInstance:
     - target: {fileID: 4042079115026037194, guid: df7cd39d0441eea4e99392b396d4d3ba,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
+      value: 0.2028302
       objectReference: {fileID: 0}
     - target: {fileID: 4042079115026037194, guid: df7cd39d0441eea4e99392b396d4d3ba,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
+      value: 0.2028302
       objectReference: {fileID: 0}
     - target: {fileID: 4042079115026037194, guid: df7cd39d0441eea4e99392b396d4d3ba,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042079115026037194, guid: df7cd39d0441eea4e99392b396d4d3ba,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.027146816
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042079115026037194, guid: df7cd39d0441eea4e99392b396d4d3ba,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042079115026037194, guid: df7cd39d0441eea4e99392b396d4d3ba,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042079115026037194, guid: df7cd39d0441eea4e99392b396d4d3ba,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042079115026037194, guid: df7cd39d0441eea4e99392b396d4d3ba,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0.6399195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042079115026037194, guid: df7cd39d0441eea4e99392b396d4d3ba,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17085,7 +17275,7 @@ GameObject:
   - component: {fileID: 1292536288}
   - component: {fileID: 1292536287}
   m_Layer: 0
-  m_Name: Fog
+  m_Name: LowerFog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22045,7 +22235,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh64222
+  m_Name: pb_Mesh180838
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22215,7 +22405,7 @@ GameObject:
   - component: {fileID: 1470869663}
   - component: {fileID: 1470869662}
   m_Layer: 0
-  m_Name: Fog (1)
+  m_Name: UpperFog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27128,7 +27318,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707611761}
-  m_LocalRotation: {x: 0.24661352, y: 0.000000018643153, z: -0.000000004744182, w: 0.96911395}
+  m_LocalRotation: {x: 0.24661352, y: -0.000000018643153, z: 0.000000004744182, w: 0.96911395}
   m_LocalPosition: {x: 0, y: 13.245, z: -21.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -39213,8 +39403,8 @@ SkinnedMeshRenderer:
   - {fileID: 4780151217934189340, guid: 97649378cf1152048ad8df7291a3ddac, type: 3}
   - {fileID: 5846262626945709379, guid: 97649378cf1152048ad8df7291a3ddac, type: 3}
   - {fileID: 1077996442088091093, guid: 97649378cf1152048ad8df7291a3ddac, type: 3}
-  - {fileID: -4347623297976156084, guid: 97649378cf1152048ad8df7291a3ddac, type: 3}
-  - {fileID: 5545816195013560259, guid: 97649378cf1152048ad8df7291a3ddac, type: 3}
+  - {fileID: 2100000, guid: fc3a107b763ba2f4c922e42e40ddd927, type: 2}
+  - {fileID: 2100000, guid: 5fbc3d0c793998b42ad871ba772d749b, type: 2}
   - {fileID: -7377890427965044779, guid: 97649378cf1152048ad8df7291a3ddac, type: 3}
   - {fileID: -7153894835339144314, guid: 97649378cf1152048ad8df7291a3ddac, type: 3}
   - {fileID: -5714298238384644890, guid: 97649378cf1152048ad8df7291a3ddac, type: 3}

@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,7 +20,6 @@ namespace Player
         private Vector2 direction;
         private Vector2 dashDirection;
         private Vector3 movement;
-        private Vector3 platformMovement;
         private float currentSpeed;
 
         public Animator animator;
@@ -31,6 +31,8 @@ namespace Player
 
         public PlayerMovementData MovementData;
         private MeshTrail meshTrail;
+
+        public StudioEventEmitter dashEventEmitter;
 
         private void Awake()
         {
@@ -141,6 +143,8 @@ namespace Player
                 {
                     dashDirection = direction;
                 }
+
+                dashEventEmitter.Play();
             }
         }
 

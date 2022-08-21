@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using UnityEngine;
 
@@ -20,6 +21,11 @@ namespace Player
         public float NextShieldTime;
 
         private PlayerAttackData currentAttack;
+
+        public StudioEventEmitter BlockEventEmitter;
+        public StudioEventEmitter Attack1EventEmitter;
+        public StudioEventEmitter Attack2EventEmitter;
+        public StudioEventEmitter Attack3EventEmitter;
 
         void Awake()
         {
@@ -63,6 +69,11 @@ namespace Player
             {
                 isAttacking = true;
                 attackCombo++;
+            }
+
+            switch (attackCombo)
+            {
+
             }
         }
 
