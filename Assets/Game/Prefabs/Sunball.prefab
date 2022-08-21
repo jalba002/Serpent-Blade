@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerDamage: 35
   bossDamage: 50
-  maxDuration: 20
+  maxDuration: 6
   canBeDeflected: 0
   deflectedMultiplier: 4
 --- !u!1 &8009054368533520574
@@ -131,7 +131,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8009054368533520574}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 5b06157f46b67dc4c8b8089a217c6048, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: a84c5c8ca808b3a40a041e2b89e0a6e1, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -145,7 +145,13 @@ VisualEffect:
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 2.1729257, y: 0.05124824, z: 0.29630598, w: 0}
+        m_Name: Color
+        m_Overridden: 1
+      - m_Value: {x: 3.3647316, y: 1.8529651, z: 0.047614038, w: 0}
+        m_Name: Color 2
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
@@ -155,7 +161,38 @@ VisualEffect:
     m_AnimationCurve:
       m_Array: []
     m_Gradient:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          key0: {r: 1, g: 0.586016, b: 0, a: 1}
+          key1: {r: 1, g: 1, b: 1, a: 1}
+          key2: {r: 1, g: 0.9378175, b: 0.9378175, a: 1}
+          key3: {r: 1, g: 0.58431375, b: 0, a: 1}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 21627
+          ctime2: 43253
+          ctime3: 65535
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 29298
+          atime2: 65535
+          atime3: 65535
+          atime4: 65535
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 4
+          m_NumAlphaKeys: 3
+        m_Name: Center Gradient
+        m_Overridden: 1
     m_NamedObject:
       m_Array: []
     m_Bool:
