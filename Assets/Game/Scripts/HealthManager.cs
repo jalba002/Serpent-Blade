@@ -7,8 +7,9 @@ public class HealthManager : MonoBehaviour
     protected float currentHealth;
 
     protected bool isInvulnerable = false;
+    protected Coroutine invulnerableCoroutine;
 
-    public void Start()
+    public virtual void Start()
     {
         currentHealth = MaxHealth;
     }
@@ -44,7 +45,14 @@ public class HealthManager : MonoBehaviour
 
     public void InvulnerableOverTime(float duration)
     {
-        StartCoroutine(InvulerableCo(duration));
+        if (isInvulnerable) return;
+
+        if (invulnerableCoroutine != null)
+        {
+            StopCoroutine(invulnerableCoroutine);
+        }
+
+        invulnerableCoroutine = StartCoroutine(InvulerableCo(duration));
     }
 
     IEnumerator InvulerableCo(float duration)

@@ -27,10 +27,13 @@ namespace Player
         public StudioEventEmitter Attack2EventEmitter;
         public StudioEventEmitter Attack3EventEmitter;
 
+        private PlayerHealthManager healthManager;
+
         void Awake()
         {
             animator = GetComponentInChildren<Animator>();
             shieldController = GetComponentInChildren<ShieldController>();
+            healthManager = GetComponent<PlayerHealthManager>();
         }
 
         private void Start()
@@ -45,6 +48,7 @@ namespace Player
             NextShieldTime = Time.time + ShieldCooldown;
             shieldController.gameObject.SetActive(true);
             animator.SetTrigger("Block");
+            healthManager.InvulnerableOverTime(0.2f);
             BlockEventEmitter.Play();
         }
 

@@ -49,9 +49,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameStateButtonTable gameStateButtonTable;
 
+    public Animator protagonistAnimator;
+
     //public StudioEventEmitter HoverSoundRef;
     //public StudioEventEmitter ClickSoundRef;
     public StudioEventEmitter BackgroundMusic;
+    public StudioEventEmitter SlashRef;
 
     private readonly string twitterNameParameter = "Check this amazing game made by @andrew_raya @JordiAlbaDev @Sergisggs @GuillemLlovDev @Belmontes_ART for the #MiniJam113 ! Here the link: ";
     private readonly string twitterDescriptionParam = "";
@@ -86,6 +89,8 @@ public class MainMenu : MonoBehaviour
         BackgroundMusic.Stop();
         canvas.interactable = false;
         LoadingScreen.FadeIn();
+        protagonistAnimator.SetTrigger("Start");
+        SlashRef.Play();
         StartCoroutine(LoadAfterFade(scene_name));
     }
 
