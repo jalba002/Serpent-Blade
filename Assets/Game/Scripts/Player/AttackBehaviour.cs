@@ -20,6 +20,7 @@ public class AttackBehaviour : StateMachineBehaviour
     {
         attackState = AttackStates.startUp;
         playerAttackController = animator.GetComponentInParent<PlayerAttackController>();
+        playerAttackController.SetCurrentAttack(AttackData);
     }
 
     // OnStateUpdate is called before OnStateUpdate is called on any state inside this state machine

@@ -7,14 +7,14 @@ public class BossHealthManagerCaller : MonoBehaviour
 
     private void Awake()
     {
-        healthManager = GetComponent<BossHealthManager>();
+        healthManager = GetComponentInParent<BossHealthManager>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PlayerAttack")
         {
-            var playerAttack = other.GetComponent<PlayerAttackController>();
+            var playerAttack = other.GetComponentInParent<PlayerAttackController>();
 
             playerAttack.EnableAttackCollider(false);
             healthManager.DecreaseHealth(playerAttack.GetCurrentAttack().Damage);

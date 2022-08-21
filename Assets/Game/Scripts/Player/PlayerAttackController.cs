@@ -82,7 +82,7 @@ namespace Player
 
         public void EnableAttackCollider(bool active)
         {
-            //SwordCollider.enabled = active;
+            SwordCollider.enabled = active;
         }
 
         public PlayerAttackData GetCurrentAttack()

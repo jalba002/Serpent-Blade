@@ -75,6 +75,8 @@ namespace Player
                 movement *= currentSpeed;
             }
 
+            movement.y = -1f;
+
             controller.Move(movement * Time.deltaTime);
 
             _animationBlend = Mathf.Lerp(_animationBlend, currentSpeed / MovementData.MaxSpeed, Time.deltaTime * MovementData.SpeedChangeRate);
