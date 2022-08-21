@@ -57,10 +57,14 @@ namespace Boss
 
         public void SwitchState<StateClass>() where StateClass : State, new()
         {
+            if (_currentState != null && _currentState.GetType() == typeof(StateClass))
+            {
+                Debug.Log("Repeated state.");
+                return;
+            }
             if(_currentState != null)
                 Debug.Log($"{_currentState.GetType().ToString()} to {typeof(StateClass)}");
             
-            if (_currentState != null && _currentState.GetType() == typeof(StateClass)) return;
             _currentState?.Exit();
             _currentState = new StateClass();
             _currentState?.Initialize(this);

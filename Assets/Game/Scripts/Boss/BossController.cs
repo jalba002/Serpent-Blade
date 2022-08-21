@@ -115,6 +115,8 @@ namespace Boss
                 currentWaitTime -= Time.deltaTime;
                 return;
             }
+
+            currentWaitTime = 0.1f;
             
             if (SetToBeStunned)
             {

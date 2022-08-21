@@ -8,10 +8,11 @@ namespace Boss
     public class Headslam : State
     {
         private float stateTimeToExit;
+        private bool waitForFall = true;
         protected override void OnStateInitialize()
         {
             _attackData = GetAttackData("Headslam");
-            stateTimeToExit = Time.timeSinceLevelLoad+_attackData.stateDuration;
+            stateTimeToExit = Time.timeSinceLevelLoad + 999f;
         }
 
         protected override void OnStateUpdate(float deltaTime)
@@ -24,7 +25,13 @@ namespace Boss
 
         protected override void OnStateCheckTransition()
         {
-            if (stateTimeToExit <= Time.timeSinceLevelLoad)
+            if (animationFinished && waitForFall)
+            {
+                stateTimeToExit = Time.timeSinceLevelLoad+_attackData.stateDuration;
+                animationFinished = false;
+                waitForFall = false;
+            }
+            else if (stateTimeToExit <= Time.timeSinceLevelLoad)
             {
                 // time to change state.
                 _stateMachine.SetAnimationTrigger("Headslam Recover");
