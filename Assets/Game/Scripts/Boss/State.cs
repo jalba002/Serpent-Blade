@@ -38,8 +38,10 @@ namespace Boss
         }
 
         public void Exit()
-        {
+        { 
             OnStateExit();
+            if(_attackData != null)
+                _stateMachine.AddOverload(_attackData.overloadAmount);
         }
 
         protected abstract void OnStateInitialize();

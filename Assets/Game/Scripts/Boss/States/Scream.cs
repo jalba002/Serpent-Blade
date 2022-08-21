@@ -22,7 +22,10 @@ public class Scream : State
 
     protected override void OnStateCheckTransition()
     {
-        
+        if (animationFinished)
+        {
+            _stateMachine.SwitchState<Idle>();
+        }
     }
 
     protected override void OnStateEnter()

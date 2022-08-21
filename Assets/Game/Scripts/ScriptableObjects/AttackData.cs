@@ -25,4 +25,9 @@ public class AttackData : ScriptableObject
     /// Rotation speed of the creature during the attack.
     /// </summary>
     public float attackRotationSpeed = 0f;
+
+    /// <summary>
+    /// Amount of overload per attack 
+    /// </summary>
+    public float overloadAmount = 5f;
 }

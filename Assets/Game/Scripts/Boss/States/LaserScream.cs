@@ -11,15 +11,6 @@ namespace Boss
         protected override void OnStateInitialize()
         {
             _attackData = GetAttackData("LaserScream");
-            if (_attackData.stateDuration >= 0)
-            {
-                stateTimeToExit = Time.timeSinceLevelLoad+_attackData.stateDuration;
-            }
-            else
-            {
-                
-            }
-            // Otherwise, just let it finish by itself.
         }
 
         protected override void OnStateUpdate(float deltaTime)
@@ -32,7 +23,7 @@ namespace Boss
 
         protected override void OnStateCheckTransition()
         {
-            if (stateTimeToExit <= Time.timeSinceLevelLoad)
+            if (animationFinished)
             {
                 // time to change state.
                 _stateMachine.SwitchState<Idle>();

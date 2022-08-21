@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: LaserScream
   m_EditorClassIdentifier: 
   animationSpeed: 1
-  waitTime: 3
+  waitTime: 2
   stateDuration: 4.5
   attackRotationSpeed: 70
+  overloadAmount: 12
