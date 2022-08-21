@@ -5,12 +5,49 @@ using UnityEngine;
 
 public class BossSoundPlayer : MonoBehaviour
 {
-    [SerializeField] StudioEventEmitter spawnAudioRef;
-    [SerializeField] StudioEventEmitter screamAudioRef;
-    [SerializeField] StudioEventEmitter dechargeAudioRef;
-    [SerializeField] StudioEventEmitter chargeAudioRef;
-    [SerializeField] StudioEventEmitter projectile1AudioRef;
-    [SerializeField] StudioEventEmitter projectile2AudioRef;
-    [SerializeField] StudioEventEmitter thunderAudioRef;
-    [SerializeField] StudioEventEmitter electricityAudioRef;
+    [SerializeField] StudioEventEmitter audioRef;
+    [SerializeField] StudioEventEmitter mouthAudioRef;
+
+    public string screamRefName;
+    public string screamRefGuid;
+
+    public string screamLaserRefName;
+    public string screamLaserRefGuid;
+
+    [SerializeField] StudioEventEmittersList soundList;
+
+    public void PlaySpawnSound()
+    {
+        //spawnAudioRef.Play();
+    }
+
+    public void PlayScreamSound()
+    {
+        soundList.screamAudioRef.Play();
+    }
+
+    public void PlayLaserScreamSound()
+    {
+        soundList.screamLaserAudioRef.Play();
+    }
+
+    public void PlayLaserScreamSound2()
+    {
+        soundList.screamLaser2AudioRef.Play();
+    }
+
+    public void PlayScreamThunderSound()
+    {
+        soundList.screamThunderAudioRef.Play();
+    }
+
+    public void PlayDechargeSound()
+    {
+        //spawnAudioRef.Play();
+    }
+
+    public void PlayChargeSound()
+    {
+        //spawnAudioRef.Play();
+    }
 }
