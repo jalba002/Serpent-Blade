@@ -15,6 +15,10 @@ namespace Boss
             {
                 stateTimeToExit = Time.timeSinceLevelLoad+_attackData.stateDuration;
             }
+            else
+            {
+                
+            }
             // Otherwise, just let it finish by itself.
         }
 
@@ -38,10 +42,12 @@ namespace Boss
         protected override void OnStateEnter()
         {
             _stateMachine.SetAnimationTrigger("Laser Beam");
+            _stateMachine.SetRotationSpeed(_attackData.attackRotationSpeed);
         }
 
         protected override void OnStateExit()
         {
+            _stateMachine.SetDefaultRotationSpeed();
             //_stateMachine.SetAnimationTrigger("Headslam Recover");
         }
     }

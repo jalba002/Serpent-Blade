@@ -46,7 +46,8 @@ public class LaserBeamScript : MonoBehaviour
     public void Shoot()
     {
         _visualEffect.enabled = true;
-        _visualEffect.Play();
+        _visualEffect.SendEvent("Laser");
+        //_visualEffect.Play();
         instantiatedBall.SetActive(true);
         // Start coroutine to end it.
         // With the duration and stuff.
@@ -57,6 +58,12 @@ public class LaserBeamScript : MonoBehaviour
         _visualEffect.Stop();
         _visualEffect.enabled = false;
         instantiatedBall.SetActive(false);
+    }
+
+    public void Showcase()
+    {
+        _visualEffect.enabled = true;
+        _visualEffect.SendEvent("Showcase");
     }
     
 }

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: LaserBeam
   m_EditorClassIdentifier: 
   animationSpeed: 1
-  waitTime: 0
-  stateDuration: -1
+  waitTime: 3
+  stateDuration: 4.5
+  attackRotationSpeed: 10

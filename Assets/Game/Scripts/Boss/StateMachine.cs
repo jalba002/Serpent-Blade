@@ -16,10 +16,14 @@ namespace Boss
         [SerializeField] private AttackStorer _attackStorer;
         [SerializeField] private Animator _animator;
 
+        private BossController _bossController;
+
         private void Awake()
         {
             if(_instantiateAttackStorer)
                 _attackStorer = Instantiate(_attackStorer);
+
+            _bossController = GetComponent<BossController>();
         }
 
         public void Update()
@@ -57,6 +61,21 @@ namespace Boss
         }
 
         #region Data
+
+        public void SetRotationSpeed(float speed)
+        {
+            _bossController.SetRotationSpeed(speed);
+        }
+
+        public float GetRotationSpeed()
+        {
+            return _bossController.GetRotationSpeed();
+        }
+
+        public void SetDefaultRotationSpeed()
+        {
+            _bossController.SetDefaultRotationSpeed();
+        }
 
         public AttackData GetAttackData(string attackData)
         {

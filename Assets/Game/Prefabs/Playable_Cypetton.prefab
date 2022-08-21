@@ -1469,11 +1469,14 @@ MonoBehaviour:
   _defaultSpawnPoint: {fileID: 0}
   _stateMachine: {fileID: 3847656589819053338}
   laserBeam: {fileID: 8814561700548320861}
+  bossParent: {fileID: 4153715895515209297}
   bossBones:
   - {fileID: 5143035720117752618}
   - {fileID: 694852333216517356}
   - {fileID: 5191339804361362302}
   - {fileID: 1187285998815516889}
+  - {fileID: 4480606522500398325}
+  startingRotationSpeed: 90
 --- !u!114 &3847656589819053338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,7 +1506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 1000
-  NeonHealthBarRenderer: {fileID: 8702078621632419933}
+  NeonHealthBarRenderer: {fileID: 3343187391567415194}
 --- !u!1 &4153715895515209296
 GameObject:
   m_ObjectHideFlags: 0

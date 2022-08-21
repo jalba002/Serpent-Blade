@@ -22,11 +22,10 @@ namespace Boss
         // }
 
         [SerializeField] private LaserBeamScript laserBeam;
-       
-        public Transform bossParent { get; private set; }
-        
-        [SerializeField]
-        private List<Transform> bossBones;
+
+        [SerializeField] private Transform bossParent;
+
+        [SerializeField] private List<Transform> bossBones;
 
         private PlayerAttackController _archnemesis;
 
@@ -35,17 +34,22 @@ namespace Boss
 
         private void Awake()
         {
-            bossParent = GetComponentInParent<Transform>();
             _archnemesis = FindObjectOfType<PlayerAttackController>();
             // If not found, try again later?
+        }
+
+        private void Start()
+        {
+            currentRotationSpeed = startingRotationSpeed;
         }
 
         public void Update()
         {
             // Rotate slowly towards player. Let users configure speed.
-            Vector3 playerDirection = _archnemesis.transform.position - transform.position;
+            Vector3 playerDirection = _archnemesis.transform.position - bossParent.transform.position;
             playerDirection.y = 0f;
-            bossParent.transform.rotation = Quaternion.Lerp(bossParent.transform.rotation, Quaternion.LookRotation(playerDirection), currentRotationSpeed);
+            bossParent.transform.rotation = Quaternion.LerpUnclamped(bossParent.transform.rotation,
+                Quaternion.LookRotation(playerDirection), Mathf.Deg2Rad * currentRotationSpeed * Time.deltaTime);
         }
 
         public void StorePosition(Object spawnPoint)
@@ -55,7 +59,9 @@ namespace Boss
 
         public void StoreBonePosition(string boneName)
         {
-            lastSpawnPoint = bossBones.Find(x => String.Equals(x.name, boneName, StringComparison.CurrentCultureIgnoreCase)).transform.position;
+            lastSpawnPoint = bossBones
+                .Find(x => String.Equals(x.name, boneName, StringComparison.CurrentCultureIgnoreCase)).transform
+                .position;
         }
 
         public void SpawnBulletLastPoint(Object bulletPrefab)
@@ -76,23 +82,33 @@ namespace Boss
                 //_animator.SetTrigger("Headslam");
                 _stateMachine.SwitchState<Headslam>();
             }
+
             if (GUILayout.Button("Scream"))
             {
                 // Apply headslam animation
                 //_animator.SetTrigger("Headslam");
                 _stateMachine.SwitchState<Scream>();
             }
+
             if (GUILayout.Button("Sunshine"))
             {
                 // Apply headslam animation
                 //_animator.SetTrigger("Headslam");
                 //_stateMachine.SwitchState<Sunshine>();
             }
+
             if (GUILayout.Button("Laser Beam"))
             {
                 // Apply headslam animation
                 //_animator.SetTrigger("Headslam");
                 _stateMachine.SwitchState<LaserBeam>();
+            }
+            
+            if (GUILayout.Button("Laser Scream"))
+            {
+                // Apply headslam animation
+                //_animator.SetTrigger("Headslam");
+                _stateMachine.SwitchState<LaserScream>();
             }
         }
 
@@ -108,6 +124,31 @@ namespace Boss
             {
                 laserBeam.Stop();
             }
+        }
+
+        public void ShowcaseLaser()
+        {
+            laserBeam.Showcase();
+        }
+
+        public Transform GetBossParent()
+        {
+            return bossParent;
+        }
+
+        public void SetDefaultRotationSpeed()
+        {
+            currentRotationSpeed = startingRotationSpeed;
+        }
+        
+        public void SetRotationSpeed(float speed)
+        {
+            currentRotationSpeed = speed;
+        }
+        
+        public float GetRotationSpeed()
+        {
+            return currentRotationSpeed;
         }
     }
 }
