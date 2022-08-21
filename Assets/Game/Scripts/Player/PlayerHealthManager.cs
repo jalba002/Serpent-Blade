@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealthManager : HealthManager
@@ -19,6 +17,14 @@ public class PlayerHealthManager : HealthManager
     private Coroutine healthBarLerpCoroutine;
     private Coroutine healthBarYellowLerpCoroutine;
     //public VolumeProfile PostProcessVolume;
+    private PlayerInputsManager inputs;
+    public CanvasFadeIn LoadingScreen;
+    [SerializeField] private Animator animator;
+
+    private void Awake()
+    {
+        inputs = GetComponent<PlayerInputsManager>();
+    }
 
     public override void Start()
     {
@@ -33,7 +39,11 @@ public class PlayerHealthManager : HealthManager
 
     public override void Die()
     {
-        
+        mainCameraShake.CameraShake(CameraShakeDuration, CameraShakeIntensity);
+        SmoothUpdateUI(currentHealth, -50f);
+        inputs.DisableInputs();
+        StartCoroutine(DeathCoroutine());
+        animator.SetTrigger("Death");
     }
 
     public override void DamageFeedback()
@@ -74,5 +84,13 @@ public class PlayerHealthManager : HealthManager
         }
 
         healthSlider.value = end;
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        LoadingScreen.FadeIn();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

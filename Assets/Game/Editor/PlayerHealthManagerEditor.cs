@@ -24,5 +24,10 @@ public class PlayerHealthManagerEditor : Editor
         {
             manager.DecreaseHealth(10f);
         }
+
+        if (GUILayout.Button("Lose 50 HP"))
+        {
+            manager.DecreaseHealth(50f);
+        }
     }
 }

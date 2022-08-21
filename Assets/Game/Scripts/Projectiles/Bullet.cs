@@ -24,14 +24,16 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     protected bool IsStopped = false;
 
+    private PlayerHealthManager playerHealth;
+
     public virtual void InstantiateBullet(Vector3 center)
     {
         // Nah.
     }
 
-    void FixedUpdate()
+    void Start()
     {
-        
+        playerHealth = FindObjectOfType<PlayerHealthManager>();
     }
 
     protected virtual void CheckOutOfGround()
@@ -63,6 +65,15 @@ public class Bullet : MonoBehaviour
 
     protected virtual void DealDamageArea(Vector3 center, float diameter)
     {
-        var hitTargets =Physics.OverlapSphere(center, diameter * 0.5f);
+        var hitTargets = Physics.OverlapSphere(center, diameter * 0.5f);
+
+        foreach (var item in hitTargets)
+        {
+            if (item.tag == "Player")
+            {
+                playerHealth.DecreaseHealth(damage);
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
