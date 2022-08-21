@@ -50,7 +50,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 3
+      - m_Value: 1
         m_Name: Ring Duration
         m_Overridden: 1
       - m_Value: 5
@@ -61,7 +61,16 @@ VisualEffect:
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 4.7328525, y: 0.22466347, z: 0, w: 1}
+        m_Name: Ray Color
+        m_Overridden: 1
+      - m_Value: {x: 1, y: 0.3087029, z: 0, w: 0}
+        m_Name: Outer Ring Color
+        m_Overridden: 1
+      - m_Value: {x: 0.6886792, y: 0.3053415, z: 0.16567281, w: 0}
+        m_Name: Inner Ring Color
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:

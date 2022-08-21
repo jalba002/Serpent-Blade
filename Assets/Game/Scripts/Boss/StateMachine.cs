@@ -22,8 +22,14 @@ namespace Boss
         {
             if(_instantiateAttackStorer)
                 _attackStorer = Instantiate(_attackStorer);
-
+            
             _bossController = GetComponent<BossController>();
+        }
+
+        private void Start()
+        {
+            if(startAutomatically)
+                SwitchState<Spawn>();
         }
 
         public void Update()
@@ -61,6 +67,11 @@ namespace Boss
         }
 
         #region Data
+
+        public void SetStateAnimFinished()
+        {
+            _currentState.animationFinished = true;
+        }
 
         public void SetRotationSpeed(float speed)
         {

@@ -1507,6 +1507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 1000
   NeonHealthBarRenderer: {fileID: 3343187391567415194}
+  timeToFillHPBar: 5
 --- !u!1 &4153715895515209296
 GameObject:
   m_ObjectHideFlags: 0
