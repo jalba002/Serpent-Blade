@@ -55,6 +55,9 @@ public class BossHealthManager : HealthManager
             Time.timeScale = 0f;
             var playerInput = FindObjectOfType<PlayerInputsManager>();
             playerInput.DisableInputsWin();
+            playerInput.GameOver = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

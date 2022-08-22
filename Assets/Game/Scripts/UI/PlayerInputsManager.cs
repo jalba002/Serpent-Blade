@@ -6,6 +6,7 @@ public class PlayerInputsManager : MonoBehaviour
 {
     private PlayerInput playerInput;
     public static Action OnDismissAction;
+    public bool GameOver = false;
 
     private void Awake()
     {
@@ -18,9 +19,12 @@ public class PlayerInputsManager : MonoBehaviour
 
     void OnPause()
     {
-        PauseManager.Instance.PauseGame();
+        if (!GameOver)
+        {
+            PauseManager.Instance.PauseGame();
 
-        ChangeInputs();
+            ChangeInputs();
+        }
     }
 
     public void ChangeInputs()
