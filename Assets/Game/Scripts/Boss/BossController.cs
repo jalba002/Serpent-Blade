@@ -39,7 +39,10 @@ namespace Boss
 
         private bool SetToBeStunned = false;
 
-        [Header("Debug")] private bool debugGUI = false;
+        [Header("Debug")] 
+        public bool debugGUI = false;
+
+        public bool UpdateAI = true;
 
         private void Awake()
         {
@@ -56,7 +59,8 @@ namespace Boss
         {
             // Rotate slowly towards player. Let users configure speed.
             RotateTowardsPlayer();
-            BossAI();
+            if(UpdateAI)
+                BossAI();
         }
 
         private void RotateTowardsPlayer()
