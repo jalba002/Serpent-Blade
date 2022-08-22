@@ -45,6 +45,12 @@ public class PlayerInputsManager : MonoBehaviour
         playerInput.actions.FindActionMap("UI").Disable();
     }
 
+    public void DisableInputsWin()
+    {
+        playerInput.actions.FindActionMap("Player").Disable();
+        playerInput.actions.FindActionMap("UI").Enable();
+    }
+
     void OnDismiss()
     {
         OnDismissAction?.Invoke();

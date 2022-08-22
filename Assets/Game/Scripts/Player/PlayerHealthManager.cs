@@ -16,7 +16,6 @@ public class PlayerHealthManager : HealthManager
 
     private Coroutine healthBarLerpCoroutine;
     private Coroutine healthBarYellowLerpCoroutine;
-    //public VolumeProfile PostProcessVolume;
     private PlayerInputsManager inputs;
     public CanvasFadeIn LoadingScreen;
     [SerializeField] private Animator animator;
@@ -50,7 +49,6 @@ public class PlayerHealthManager : HealthManager
     public override void DamageFeedback()
     {
         InvulnerableOverTime(InvulnerableTime);
-        //DamageSoundRef.Play();
         mainCameraShake.CameraShake(CameraShakeDuration, CameraShakeIntensity);
         SmoothUpdateUI(currentHealth, -50f);
     }

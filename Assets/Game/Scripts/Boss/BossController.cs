@@ -50,6 +50,13 @@ namespace Boss
         private void Start()
         {
             currentRotationSpeed = startingRotationSpeed;
+            StartCoroutine(EntranceCoroutine());
+        }
+
+        IEnumerator EntranceCoroutine()
+        {
+            yield return new WaitForSeconds(2f);
+            _stateMachine.SwitchState<Entrance>();
         }
 
         public void Update()
@@ -300,13 +307,13 @@ namespace Boss
 
         private void OnGUI()
         {
+            if (!debugGUI) return;
+
             if (GUILayout.Button("Entrada"))
             {
                 _stateMachine.SwitchState<Entrance>();
             }
 
-            if (!debugGUI) return;
-            
             if (GUILayout.Button("Headslam"))
             {
                 // Apply headslam animation

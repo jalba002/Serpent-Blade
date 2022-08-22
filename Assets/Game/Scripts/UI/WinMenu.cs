@@ -33,15 +33,17 @@ public class WinMenu : MonoBehaviour
     public void LoadScene(string scene_name)
     {
         //BackgroundMusic.Stop();
-        canvas.interactable = false;
+        //
         //LoadingScreen.FadeIn();
-        StartCoroutine(LoadAfterFade(scene_name));
+        SceneManager.LoadScene(scene_name);
+        //StartCoroutine(LoadAfterFade(scene_name));
     }
 
     IEnumerator LoadAfterFade(string scene_name)
     {
         float counter = 0f;
 
+        canvas.interactable = false;
         while (counter < Duration)
         {
             counter += Time.deltaTime;
