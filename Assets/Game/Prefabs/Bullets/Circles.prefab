@@ -56,6 +56,7 @@ MonoBehaviour:
   IsStopped: 0
   sineAmplitude: 0
   sides: 32
-  delayBetweenWaves: 0.5
+  delayBetweenWaves: 1
   waves: 5
-  projectileSpeed: 20
+  projectileSpeed: 16
+  spawn: 0
