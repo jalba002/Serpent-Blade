@@ -11,11 +11,13 @@ public class BossHealthManager : HealthManager
     public CanvasFadeIn LoadingScreen;
     public CanvasFadeIn WinScreen;
     public string NextSceneName = "";
+    private BossSoundPlayer sounds;
 
     private void Awake()
     {
         propertyBlock = new MaterialPropertyBlock();
         animator = GetComponent<Animator>();
+        sounds = GetComponent<BossSoundPlayer>();
     }
 
     public void UpdateHealthBarMaterial()
@@ -28,6 +30,7 @@ public class BossHealthManager : HealthManager
     {
         UpdateHealthBarMaterial();
         animator.SetTrigger("Death");
+        sounds.PlayDamageSound();
 
         StartCoroutine(NextSceneCoroutine());
     }
@@ -35,6 +38,7 @@ public class BossHealthManager : HealthManager
     public override void DamageFeedback()
     {
         UpdateHealthBarMaterial();
+        sounds.PlayDamageSound();
     }
 
     IEnumerator NextSceneCoroutine()
@@ -51,6 +55,9 @@ public class BossHealthManager : HealthManager
             Time.timeScale = 0f;
             var playerInput = FindObjectOfType<PlayerInputsManager>();
             playerInput.DisableInputsWin();
+            playerInput.GameOver = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

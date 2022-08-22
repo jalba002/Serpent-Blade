@@ -6,19 +6,25 @@ public class PlayerInputsManager : MonoBehaviour
 {
     private PlayerInput playerInput;
     public static Action OnDismissAction;
+    public bool GameOver = false;
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         playerInput.actions.FindActionMap("Player").Enable();
         playerInput.actions.FindActionMap("UI").Disable();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void OnPause()
     {
-        PauseManager.Instance.PauseGame();
+        if (!GameOver)
+        {
+            PauseManager.Instance.PauseGame();
 
-        ChangeInputs();
+            ChangeInputs();
+        }
     }
 
     public void ChangeInputs()

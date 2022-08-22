@@ -48,7 +48,7 @@ namespace Player
             NextShieldTime = Time.time + ShieldCooldown;
             shieldController.gameObject.SetActive(true);
             animator.SetTrigger("Block");
-            healthManager.InvulnerableOverTime(0.2f);
+            healthManager.InvulnerableOverTime(0.5f);
             BlockEventEmitter.Play();
         }
 

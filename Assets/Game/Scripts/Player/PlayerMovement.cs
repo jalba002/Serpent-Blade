@@ -44,9 +44,6 @@ namespace Player
         private void Start()
         {
             currentState = PlayerStates.Standing;
-
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
 
         void Update()
@@ -145,20 +142,6 @@ namespace Player
                 }
 
                 dashEventEmitter.Play();
-            }
-        }
-
-        public void OnLockCursor()
-        {
-            if (Cursor.lockState == CursorLockMode.Locked)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
             }
         }
 

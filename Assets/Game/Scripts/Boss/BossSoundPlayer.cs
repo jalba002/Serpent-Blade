@@ -5,15 +5,6 @@ using UnityEngine;
 
 public class BossSoundPlayer : MonoBehaviour
 {
-    [SerializeField] StudioEventEmitter audioRef;
-    [SerializeField] StudioEventEmitter mouthAudioRef;
-
-    public string screamRefName;
-    public string screamRefGuid;
-
-    public string screamLaserRefName;
-    public string screamLaserRefGuid;
-
     [SerializeField] StudioEventEmittersList soundList;
 
     public void PlaySpawnSound()
@@ -59,5 +50,10 @@ public class BossSoundPlayer : MonoBehaviour
     public void PlayDeathScreamSound()
     {
         soundList.deathScreamAudioRef.Play();
+    }
+
+    public void PlayDamageSound()
+    {
+        soundList.damageAudioRef.Play();
     }
 }

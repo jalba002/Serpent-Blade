@@ -13,8 +13,9 @@ public class BossNeonRecharger : MonoBehaviour
         UpdateNeonCharge(currentCharge/50f);
     }
 
-    private void UpdateNeonCharge(float newValue)
+    public void UpdateNeonCharge(float newValue)
     {
+        currentCharge = newValue;
         NeonHealthBarRenderer.materials[4].SetFloat("_Energy", newValue);
     }
 
@@ -26,6 +27,8 @@ public class BossNeonRecharger : MonoBehaviour
     IEnumerator RechargeCoroutine(float duration)
     {
         float counter = 0f;
+
+        yield return new WaitForSeconds(2f);
 
         while (counter < duration)
         {
