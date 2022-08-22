@@ -39,8 +39,7 @@ namespace Boss
 
         private bool SetToBeStunned = false;
 
-        [Header("Debug")] 
-        public bool debugGUI = false;
+        [Header("Debug")] public bool debugGUI = false;
 
         public bool UpdateAI = true;
 
@@ -66,7 +65,7 @@ namespace Boss
         {
             // Rotate slowly towards player. Let users configure speed.
             RotateTowardsPlayer();
-            if(UpdateAI)
+            if (UpdateAI)
                 BossAI();
         }
 
@@ -120,7 +119,7 @@ namespace Boss
             // Try to only select the next state when the current one is on IDLE.
             // Then, weight every attack and do some shenanigans to select it.
             if (_stateMachine.GetCurrentState().GetType() != typeof(Idle)) return;
-            
+
             if (currentWaitTime >= 0f)
             {
                 currentWaitTime -= Time.deltaTime;
@@ -128,7 +127,7 @@ namespace Boss
             }
 
             currentWaitTime = 0.1f;
-            
+
             if (SetToBeStunned)
             {
                 _stateMachine.SwitchState<Stunned>();
@@ -144,7 +143,7 @@ namespace Boss
             int chance = Random.Range(0, 101);
             int[] selectedChances;
             int distance = 0;
-           
+
 
             if (playerDistance < closeDistance)
             {
@@ -183,7 +182,7 @@ namespace Boss
             {
                 //rock
                 chance = Random.Range(0, 101);
-                if(chance < 85)
+                if (chance < 85)
                 {
                     _stateMachine.SwitchState<Headslam>();
                 }
@@ -277,7 +276,15 @@ namespace Boss
                     laserAttackBias -= 30;
                 }
 
-                _stateMachine.SwitchState<Sunshine>();
+                chance = Random.Range(0, 101);
+                if (chance < 50)
+                {
+                    _stateMachine.SwitchState<Sunshine>();
+                }
+                else
+                {
+                    _stateMachine.SwitchState<Circles>();
+                }
             }
         }
 
@@ -338,17 +345,17 @@ namespace Boss
             {
                 _stateMachine.SwitchState<LaserBeam>();
             }
-            
+
             if (GUILayout.Button("Laser Scream"))
             {
                 _stateMachine.SwitchState<LaserScream>();
             }
-            
+
             if (GUILayout.Button("Electric Shout"))
             {
                 _stateMachine.SwitchState<ElectricShout>();
             }
-            
+
 
             if (GUILayout.Button("Stunned"))
             {

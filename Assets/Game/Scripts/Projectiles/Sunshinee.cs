@@ -25,18 +25,18 @@ namespace Projectiles
         IEnumerator BulletSpawnWaves(Vector3 center)
         {
             int i = 0;
+            float side = 360 / sides;
             while (i < waves)
             {
                 for (int j = 0; j < sides; j++)
                 {
-                    float angle = 360 / sides * j;
-                    angle *= Mathf.Deg2Rad;
+                    float angle = side * j * Mathf.Deg2Rad;
                     Vector3 direction = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
                     var go = Instantiate(projectilePrefab, center, Quaternion.identity);
                     go.transform.forward = direction;
                     go.transform.position += go.transform.right * (Mathf.Sin(Time.timeSinceLevelLoad) * sineAmplitude);
                     go.GetComponent<Projectile>().Shoot(direction * projectileSpeed);
-                    // yield return null;
+                    yield return null;
                     //.velocity = direction * projectileSpeed;
                 }
 
