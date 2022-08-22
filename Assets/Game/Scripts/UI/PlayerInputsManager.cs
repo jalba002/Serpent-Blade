@@ -12,6 +12,8 @@ public class PlayerInputsManager : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerInput.actions.FindActionMap("Player").Enable();
         playerInput.actions.FindActionMap("UI").Disable();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void OnPause()

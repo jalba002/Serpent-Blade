@@ -70,6 +70,8 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
+        Time.timeScale = 1f;
+
         gameStateCanvasTable.Add(MenuState.Main, GetComponent<CanvasFadeIn>());
         gameStateCanvasTable.Add(MenuState.Options, OptionsCanvas);
         gameStateCanvasTable.Add(MenuState.Controls, ControlsCanvas);

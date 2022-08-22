@@ -88,7 +88,7 @@ MonoBehaviour:
   playerDamage: 20
   bossDamage: 50
   maxDuration: 6
-  canBeDeflected: 0
+  canBeDeflected: 1
   deflectedMultiplier: 4
 --- !u!1 &8009054368533520574
 GameObject:

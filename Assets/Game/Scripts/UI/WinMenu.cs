@@ -25,9 +25,6 @@ public class WinMenu : MonoBehaviour
     private void Start()
     {
         canvas = GetComponent<CanvasGroup>();
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
 
     public void LoadScene(string scene_name)
