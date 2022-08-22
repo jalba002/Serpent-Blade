@@ -447,10 +447,10 @@ MonoBehaviour:
   Path: Assets/Game/StreamingAssets/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637967290260579881
+  lastModified: 637967352145530316
   FileSizes:
   - Name: 
-    Value: 2470
+    Value: 2512
   Exists: 1
 --- !u!114 &-636161781283420976
 MonoBehaviour:
@@ -467,7 +467,7 @@ MonoBehaviour:
   Path: Assets/Game/StreamingAssets/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637967290262750136
+  lastModified: 637967352146260490
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -517,12 +517,13 @@ MonoBehaviour:
   - {fileID: -5738886898500122354}
   - {fileID: 4956865410431487016}
   - {fileID: -2449574508527131893}
+  - {fileID: 2035191938812943446}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4429533232920727940}
   StringsBanks:
   - {fileID: -891290609426840768}
-  cacheTime: 637967290268282965
+  cacheTime: 637967352148312291
   cacheVersion: 131591
 --- !u!114 &608428432614156734
 MonoBehaviour:
@@ -578,6 +579,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7392
+--- !u!114 &2035191938812943446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Boss/BossTakeDamage
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Boss/BossTakeDamage
+  Guid:
+    Data1: -977211450
+    Data2: 1215827450
+    Data3: 1762883496
+    Data4: -892588122
+  Banks:
+  - {fileID: 5712357193726795141}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2911818082374393179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +729,7 @@ MonoBehaviour:
   Path: Assets/Game/StreamingAssets/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637967290260340526
+  lastModified: 637967352145510310
   FileSizes: []
   Exists: 1
 --- !u!114 &4956865410431487016
@@ -773,7 +801,7 @@ MonoBehaviour:
   Path: Assets/Game/StreamingAssets/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637967290268282965
+  lastModified: 637967352148312291
   FileSizes: []
   Exists: 1
 --- !u!114 &6558184205508194925

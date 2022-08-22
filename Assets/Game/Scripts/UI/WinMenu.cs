@@ -20,7 +20,7 @@ public class WinMenu : MonoBehaviour
     private readonly string twitterNameParameter = "Check this amazing game made by @andrew_raya @JordiAlbaDev @Sergisggs @GuillemLlovDev @Belmontes_ART for the #MiniJam113 ! Here the link: ";
     private readonly string twitterDescriptionParam = "";
     private readonly string twitterAdress = "https://twitter.com/intent/tweet";
-    private readonly string miniGameJamLink = "https://andrew-raya.itch.io/cosmic-horror";
+    private readonly string miniGameJamLink = "https://andrew-raya.itch.io/serpent-blade";
 
     private void Start()
     {
