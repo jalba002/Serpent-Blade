@@ -13183,7 +13183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "WASD -- Move\r\n\"Shift\" -- Dash\r\n\"Right Click\" -- Attack \r\n\"Left
+  m_text: "WASD -- Move\r\n\"Shift\" -- Dash\r\n\"Left Click\" -- Attack \r\n\"Right
     Click\" -- Parry shield"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c117ff603ac92944b7dc296ffc600f8, type: 2}
