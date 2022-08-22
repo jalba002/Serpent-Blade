@@ -27,10 +27,10 @@ public class Projectile : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    // private void Start()
-    // {
-    //     _rigidbody.velocity = transform.forward ;
-    // }
+    private void Start()
+    {
+        StartCoroutine(DestroyCoroutine());
+    }
 
     private void OnTriggerEnter(Collider other)
     {

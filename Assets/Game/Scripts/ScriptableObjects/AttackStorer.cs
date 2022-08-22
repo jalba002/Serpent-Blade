@@ -10,6 +10,6 @@ public class AttackStorer : ScriptableObject
 
     public AttackData GetAttackData(string attackName)
     {
-        return _attackDatas.Find(x=> x.name == attackName);
+        return _attackDatas.Find(x=> x.name.Split("_")[0] == attackName);
     }
 }
