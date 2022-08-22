@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c7361d13db13b744bb11c9394ac9d9f, type: 3}
-  m_Name: Stunned
+  m_Name: LaserScream_02
   m_EditorClassIdentifier: 
   animationSpeed: 1
-  waitTime: 0
-  stateDuration: 6
-  attackRotationSpeed: 0
-  overloadAmount: 0
+  waitTime: 0.75
+  stateDuration: 4
+  attackRotationSpeed: 70
+  overloadAmount: 15

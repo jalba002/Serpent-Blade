@@ -507,8 +507,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7bb408bc6397541b9b5bb20cb38f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   ArenaCenter: {fileID: 1363794937}
   MovementData: {fileID: 11400000, guid: f1a8b2acfa472c44697adce9dbdf80e7, type: 2}
+  dashEventEmitter: {fileID: 0}
 --- !u!114 &423313539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +556,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SwordCollider: {fileID: 1437116510}
   AttackComboValidTime: 0.5
+  attackComboTimerDone: 0
+  attackCombo: 1
+  isAttacking: 0
+  ShieldCooldown: 2
+  NextShieldTime: 0
+  BlockEventEmitter: {fileID: 0}
+  Attack1EventEmitter: {fileID: 0}
+  Attack2EventEmitter: {fileID: 0}
+  Attack3EventEmitter: {fileID: 0}
 --- !u!4 &452905707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: 2ecbe077149e44e45856124499933edb,
@@ -638,7 +649,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488017578}
-  m_LocalRotation: {x: 0.2466129, y: -0.0021226737, z: 0.0005401634, w: 0.9691116}
+  m_LocalRotation: {x: 0.2466129, y: -0.002122711, z: 0.00054017286, w: 0.9691116}
   m_LocalPosition: {x: 0.094184525, y: 13.245, z: -21.499794}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -723,6 +734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 605327893}
   - component: {fileID: 605327892}
+  - component: {fileID: 605327894}
   m_Layer: 0
   m_Name: Handspawner Particles
   m_TagString: Untagged
@@ -742,8 +754,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9ceff732947e848930859d70a3fb46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _debugParticlePrefab: {fileID: 4897995629898027594, guid: 8d422da619eec614e9c74391f3caf14b,
+  _debugParticlePrefab: {fileID: 4897995629898027594, guid: a9445600f3c0f4e46a5cd75a11568213,
     type: 3}
+  bulletList: {fileID: 11400000, guid: 371ee3f1b61e02d42b151d563615f8ad, type: 2}
 --- !u!4 &605327893
 Transform:
   m_ObjectHideFlags: 0
@@ -759,6 +772,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &605327894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605327891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 43fc0b7ebca22604cb09ffb87c168b37,
+    type: 3}
+  m_NotificationBehavior: 1
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!4 &776874713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1151388028547126963, guid: 167e9972dc15a704a884048ead1f5196,
@@ -1228,7 +1272,7 @@ Transform:
   m_Children:
   - {fileID: 68852181}
   m_Father: {fileID: 452905707}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608818575
 GameObject:
@@ -1304,7 +1348,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707611761}
-  m_LocalRotation: {x: 0.2466129, y: -0.0021226737, z: 0.0005401634, w: 0.9691116}
+  m_LocalRotation: {x: 0.2466129, y: -0.002122711, z: 0.00054017286, w: 0.9691116}
   m_LocalPosition: {x: 0.094184525, y: 13.245, z: -21.499794}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1342,7 +1386,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7772357, y: 1}
+    m_SensorSize: {x: 1.7781065, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1365,7 +1409,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   center: {fileID: 1363794937}
   player: {fileID: 423313537}
-  CameraLerpSpeed: 5
+  CameraHorizontalLerpSpeed: 1
+  MaxZoom: -17
+  MinZoom: -24
+  CameraVerticalLerpSpeed: 1
 --- !u!1 &1927076258
 GameObject:
   m_ObjectHideFlags: 0

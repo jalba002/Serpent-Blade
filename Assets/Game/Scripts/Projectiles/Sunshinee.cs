@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
@@ -11,6 +12,8 @@ namespace Projectiles
         public float delayBetweenWaves = 0.1f;
         public float waves = 16;
         public float projectileSpeed = 8f;
+
+        [Header("Debug")] public bool spawn = false;
 
         public override void InstantiateBullet(Vector3 center)
         {
@@ -38,6 +41,15 @@ namespace Projectiles
 
                 i++;
                 yield return new WaitForSeconds(delayBetweenWaves);
+            }
+        }
+
+        private void OnValidate()
+        {
+            if (spawn)
+            {
+                spawn = false;
+                InstantiateBullet(Vector3.zero);
             }
         }
     }
