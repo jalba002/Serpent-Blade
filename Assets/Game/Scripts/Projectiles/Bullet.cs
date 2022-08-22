@@ -71,8 +71,9 @@ public class Bullet : MonoBehaviour
         {
             if (item.tag == "Player")
             {
-                playerHealth.DecreaseHealth(damage);
+                item.GetComponent<PlayerHealthManager>().DecreaseHealth(damage);
                 Destroy(this.gameObject);
+                break;
             }
         }
     }

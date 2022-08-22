@@ -80,25 +80,25 @@ namespace Boss
 
         private int[] closeChances = new[]
         {
-            35, // Rock
-            30, // Rays
-            30, // Electric
-            5 // Projectiles
+            30, // Rock
+            35, // Rays
+            25, // Electric
+            10 // Projectiles
         };
 
         private int[] mediumChances = new[]
         {
-            10, // Rock
-            25, // Rays
-            25, // Electric
-            35 // Projectiles
+            5, // Rock
+            35, // Rays
+            20, // Electric
+            40 // Projectiles
         };
 
         private int[] farChances = new[]
         {
             20, // Rock
             15, // Rays
-            30, // Electric
+            35, // Electric
             30 // Projectiles
         };
 
@@ -142,7 +142,6 @@ namespace Boss
                 // Shout laser if the projectile and electric bias are high. 
                 selectedChances = closeChances;
                 distance = 0;
-                slamBias = -10;
             }
             else if (playerDistance < mediumDistance)
             {
