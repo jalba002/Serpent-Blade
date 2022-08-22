@@ -27,11 +27,6 @@ public class Projectile : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Start()
-    {
-        StartCoroutine(DestroyCoroutine());
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         // 
@@ -40,7 +35,6 @@ public class Projectile : MonoBehaviour
         if (other.tag == "Player")
         {
             other.GetComponent<PlayerHealthManager>().DecreaseHealth(playerDamage);
-            Destroy(this.gameObject);
         }
 
         if (other.tag == "PlayerShield")
@@ -56,9 +50,11 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    public void Shoot(Vector3 vel)
+    public void Shoot(Vector3 vel, bool destroy = true)
     {
         _rigidbody.velocity = vel;
+        if (destroy)
+            StartCoroutine(DestroyCoroutine());
     }
 
     void ReturnProjectile()

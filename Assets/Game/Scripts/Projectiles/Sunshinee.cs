@@ -36,7 +36,8 @@ namespace Projectiles
                     go.transform.forward = direction;
                     go.transform.position += go.transform.right * (Mathf.Sin(Time.timeSinceLevelLoad) * sineAmplitude);
                     go.GetComponent<Projectile>().Shoot(direction * projectileSpeed);
-                        //.velocity = direction * projectileSpeed;
+                    // yield return null;
+                    //.velocity = direction * projectileSpeed;
                 }
 
                 i++;
