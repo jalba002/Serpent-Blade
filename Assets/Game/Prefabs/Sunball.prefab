@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4dee60660dc24647bd2f56430d6e43a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDamage: 35
+  playerDamage: 20
   bossDamage: 50
   maxDuration: 6
   canBeDeflected: 0
