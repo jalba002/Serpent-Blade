@@ -10470,6 +10470,7 @@ MonoBehaviour:
   chargeAudioRef: {fileID: 367505361}
   headSlamAudioRef: {fileID: 367505362}
   deathScreamAudioRef: {fileID: 367505364}
+  damageAudioRef: {fileID: 367505365}
 --- !u!114 &367505359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10640,6 +10641,36 @@ MonoBehaviour:
       Data3: 887112846
       Data4: 1884850441
     Path: event:/SFX/Boss/Boss_Death_Shout
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 40
+--- !u!114 &367505365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367505352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -977211450
+      Data2: 1215827450
+      Data3: 1762883496
+      Data4: -892588122
+    Path: event:/SFX/Boss/BossTakeDamage
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -38460,6 +38491,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.116001
       objectReference: {fileID: 0}
+    - target: {fileID: 3847656589819053338, guid: 4da29f8a146fb5b498c880fb0c126cba,
+        type: 3}
+      propertyPath: _attackStorer
+      value: 
+      objectReference: {fileID: 11400000, guid: 60e643be11f71f44b911acf5e1c5b4e9,
+        type: 2}
     - target: {fileID: 4058702923303257817, guid: 4da29f8a146fb5b498c880fb0c126cba,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38950,6 +38987,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -15.115589
       objectReference: {fileID: 0}
+    - target: {fileID: 8702078621632419933, guid: 4da29f8a146fb5b498c880fb0c126cba,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 431cee4647110cc42a806a7140dc477f, type: 2}
     - target: {fileID: 8774359508066772982, guid: 4da29f8a146fb5b498c880fb0c126cba,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -39085,12 +39127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95beb71b79005a24084ade16a71a3fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioRef: {fileID: 2137623351}
-  mouthAudioRef: {fileID: 367505354}
-  screamRefName: 
-  screamRefGuid: 
-  screamLaserRefName: 
-  screamLaserRefGuid: 
   soundList: {fileID: 367505358}
 --- !u!114 &2137623351
 MonoBehaviour:

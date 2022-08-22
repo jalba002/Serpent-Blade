@@ -14,4 +14,5 @@ public class StudioEventEmittersList : MonoBehaviour
     public StudioEventEmitter chargeAudioRef;
     public StudioEventEmitter headSlamAudioRef;
     public StudioEventEmitter deathScreamAudioRef;
+    public StudioEventEmitter damageAudioRef;
 }

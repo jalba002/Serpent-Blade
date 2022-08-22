@@ -44,9 +44,13 @@ namespace Boss
 
         public bool UpdateAI = true;
 
+        private BossNeonRecharger neonRecharger;
+
         private void Awake()
         {
             _archnemesis = FindObjectOfType<PlayerAttackController>();
+            neonRecharger = GetComponent<BossNeonRecharger>();
+
             // If not found, try again later?
         }
 
@@ -132,6 +136,7 @@ namespace Boss
             if (SetToBeStunned)
             {
                 _stateMachine.SwitchState<Stunned>();
+                neonRecharger.Recharge();
                 SetToBeStunned = false;
                 //currentOverload = 0f;
                 return;
@@ -378,6 +383,7 @@ namespace Boss
 
             currentOverload = Mathf.Min(currentOverload + amount, maximumOverload);
             CheckOverload();
+            neonRecharger.UpdateNeonCharge(currentOverload/maximumOverload);
         }
 
         public void CheckOverload()
