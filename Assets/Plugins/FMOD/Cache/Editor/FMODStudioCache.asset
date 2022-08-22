@@ -447,7 +447,7 @@ MonoBehaviour:
   Path: Assets/Game/StreamingAssets/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637967276367060688
+  lastModified: 637967290260579881
   FileSizes:
   - Name: 
     Value: 2470
@@ -467,7 +467,7 @@ MonoBehaviour:
   Path: Assets/Game/StreamingAssets/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637967276367960890
+  lastModified: 637967290262750136
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -522,7 +522,7 @@ MonoBehaviour:
   - {fileID: 4429533232920727940}
   StringsBanks:
   - {fileID: -891290609426840768}
-  cacheTime: 637967276369394250
+  cacheTime: 637967290268282965
   cacheVersion: 131591
 --- !u!114 &608428432614156734
 MonoBehaviour:
@@ -701,7 +701,7 @@ MonoBehaviour:
   Path: Assets/Game/StreamingAssets/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637967276367040687
+  lastModified: 637967290260340526
   FileSizes: []
   Exists: 1
 --- !u!114 &4956865410431487016
@@ -773,7 +773,7 @@ MonoBehaviour:
   Path: Assets/Game/StreamingAssets/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637967276369394250
+  lastModified: 637967290268282965
   FileSizes: []
   Exists: 1
 --- !u!114 &6558184205508194925
