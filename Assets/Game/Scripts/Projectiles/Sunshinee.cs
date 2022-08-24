@@ -36,11 +36,11 @@ namespace Projectiles
                     float angle = side * j * Mathf.Deg2Rad;
                     Vector3 direction = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
                     var go = Instantiate(projectilePrefab, center, Quaternion.identity);
-                    go.SetActive(false);
                     objectsToStart.Add(go);
                     go.transform.forward = direction;
                     go.transform.position += go.transform.right * (Mathf.Sin(Time.timeSinceLevelLoad) * sineAmplitude);
                     go.GetComponent<Projectile>().Shoot(direction * projectileSpeed);
+                    go.SetActive(false);
                     yield return null;
                     //.velocity = direction * projectileSpeed;
                 }

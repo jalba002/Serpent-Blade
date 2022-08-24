@@ -23,8 +23,8 @@ public class GroundRay : Bullet
         var visualEffect = GetComponentInChildren<VisualEffect>();
         var delay = visualEffect.GetFloat("Ring Duration");
         ringSize = visualEffect.GetFloat("Ring Max Size");
-        var maxParticleLifetime = visualEffect.GetFloat("Sparks Max Life");
-        StartCoroutine(ShockGround(delay, maxParticleLifetime));
+        var groundMark = visualEffect.GetFloat("Ground Mark Duration");
+        StartCoroutine(ShockGround(delay, groundMark));
     }
 
     IEnumerator ShockGround(float delay, float maxLifetime)
@@ -33,7 +33,7 @@ public class GroundRay : Bullet
         DealDamageArea(spawnPoint, ringSize);
         drawSphere = true;
         audioRef.Play();
-        Destroy(this.gameObject, maxLifetime * 2f);
+        Destroy(this.gameObject, maxLifetime + 1f);
     }
     
     private void OnDrawGizmos()
