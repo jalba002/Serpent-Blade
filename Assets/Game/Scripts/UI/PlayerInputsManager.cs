@@ -57,8 +57,18 @@ public class PlayerInputsManager : MonoBehaviour
         playerInput.actions.FindActionMap("UI").Enable();
     }
 
-    void OnDismiss()
+    public void OnLockCursor()
     {
-        OnDismissAction?.Invoke();
+        //if (Cursor.lockState == CursorLockMode.Locked)
+        //{
+        //    Cursor.lockState = CursorLockMode.None;
+        //    Cursor.visible = true;
+        //}
+        //else
+        //{
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //    Cursor.visible = false;
+        //}
+        
     }
 }

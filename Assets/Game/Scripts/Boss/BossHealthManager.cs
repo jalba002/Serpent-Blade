@@ -12,12 +12,14 @@ public class BossHealthManager : HealthManager
     public CanvasFadeIn WinScreen;
     public string NextSceneName = "";
     private BossSoundPlayer sounds;
+    private ScreenShake screenShake;
 
     private void Awake()
     {
         propertyBlock = new MaterialPropertyBlock();
         animator = GetComponent<Animator>();
         sounds = GetComponent<BossSoundPlayer>();
+        screenShake = FindObjectOfType<ScreenShake>();
     }
 
     public void UpdateHealthBarMaterial()
@@ -37,8 +39,10 @@ public class BossHealthManager : HealthManager
 
     public override void DamageFeedback()
     {
+        animator.SetTrigger("TakeDamage");
         UpdateHealthBarMaterial();
         sounds.PlayDamageSound();
+        screenShake.CameraShake(0.1f, 0.75f);
     }
 
     IEnumerator NextSceneCoroutine()

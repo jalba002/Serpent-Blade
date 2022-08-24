@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScreenShake : MonoBehaviour
 {
     private CinemachineVirtualCamera virtualCamera;
+    private Coroutine cameraShakeCoroutine;
 
     private void Awake()
     {
@@ -13,7 +14,10 @@ public class ScreenShake : MonoBehaviour
 
     public void CameraShake(float duration, float intensity)
     {
-        StartCoroutine(CameraShakeCoroutine(duration, intensity));
+        if (cameraShakeCoroutine != null)
+            StopCoroutine(cameraShakeCoroutine);
+
+        cameraShakeCoroutine = StartCoroutine(CameraShakeCoroutine(duration, intensity));
     }
 
     private IEnumerator CameraShakeCoroutine(float duration, float intensity)

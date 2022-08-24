@@ -20,7 +20,7 @@ MonoBehaviour:
     x: 1624
     y: 246
     width: 2756
-    height: 2534
+    height: 2514
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4712,7 +4712,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"d0cdb278af6498c48b9673713bc09c1e","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"387c5a3e1c73a8840884305876c50e96","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: baseColorMap
@@ -8779,7 +8779,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":-2432090755550338912,"guid":"a7e44ddb09f2ef2468debf424dec54ab","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":-8961868410195707069,"guid":"acbe33cda05702647b015e3996fb747c","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mesh0
@@ -8847,7 +8847,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":-2432090755550338912,"guid":"31074ff8e8a61524985cfc0f9904405c","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":1223690341079653744,"guid":"1bde8a6c594ece346b98bcb5d09f41d3","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mesh1
@@ -9187,7 +9187,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":-2432090755550338912,"guid":"a7e44ddb09f2ef2468debf424dec54ab","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":6438282400835439542,"guid":"ef385c0b9beac2b4da34bae2760cb10b","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mesh
