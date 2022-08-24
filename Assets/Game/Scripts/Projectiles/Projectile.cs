@@ -53,8 +53,10 @@ public class Projectile : MonoBehaviour
     public void Shoot(Vector3 vel, bool destroy = true)
     {
         _rigidbody.velocity = vel;
-        if (destroy)
-            StartCoroutine(DestroyCoroutine());
+        if(destroy)
+            Destroy(this.gameObject, maxDuration);
+        //if (destroy)
+            //StartCoroutine(DestroyCoroutine());
     }
 
     void ReturnProjectile()
