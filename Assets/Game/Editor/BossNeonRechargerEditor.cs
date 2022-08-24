@@ -19,10 +19,5 @@ public class BossNeonRechargerEditor : Editor
         {
             manager.Recharge();
         }
-
-        if (GUILayout.Button("Lose 10 Energy"))
-        {
-            manager.DecreaseNeonCharge(10f);
-        }
     }
 }
