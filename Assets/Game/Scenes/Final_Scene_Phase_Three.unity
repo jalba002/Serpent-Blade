@@ -43382,7 +43382,7 @@ PrefabInstance:
     - target: {fileID: 3847656589819053333, guid: 4da29f8a146fb5b498c880fb0c126cba,
         type: 3}
       propertyPath: UpdateAI
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3847656589819053333, guid: 4da29f8a146fb5b498c880fb0c126cba,
         type: 3}
