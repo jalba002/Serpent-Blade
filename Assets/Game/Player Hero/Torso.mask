@@ -346,23 +346,23 @@ AvatarMask:
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck
     m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/head_end
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-STR-neck
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-STR-neck/MCH-spine.005
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-STR-neck/MCH-spine.005/tweak_spine.005
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-STR-neck/MCH-spine.005/tweak_spine.005/tweak_spine.005_end
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/tweak_spine.004
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/tweak_spine.004/tweak_spine.004_end
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-WGT-chest
     m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-WGT-chest/MCH-WGT-chest_end
@@ -372,7 +372,7 @@ AvatarMask:
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005
     m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail.001
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail.001/DEF-hair_tail.002
     m_Weight: 0
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail.001/DEF-hair_tail.002/DEF-hair_tail.003
@@ -386,7 +386,7 @@ AvatarMask:
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail.001/DEF-hair_tail.002/DEF-hair_tail.003/DEF-hair_tail.004/DEF-hair_tail.005/DEF-hair_tail.006/DEF-hair_tail.006_end
     m_Weight: 0
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail_F.001.L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail_F.001.L/DEF-hair_tail_F.002.L
     m_Weight: 0
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail_F.001.L/DEF-hair_tail_F.002.L/DEF-hair_tail_F.003.L
@@ -396,7 +396,7 @@ AvatarMask:
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail_F.001.L/DEF-hair_tail_F.002.L/DEF-hair_tail_F.003.L/DEF-hair_tail_F.004.L/DEF-hair_tail_F.004.L_end
     m_Weight: 0
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail_F.001.R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail_F.001.R/DEF-hair_tail_F.002.R
     m_Weight: 0
   - m_Path: rig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/ORG-spine.004/ORG-spine.005/DEF-hair_tail_F.001.R/DEF-hair_tail_F.002.R/DEF-hair_tail_F.003.R
@@ -816,11 +816,11 @@ AvatarMask:
   - m_Path: rig/MCH-upper_arm_ik_target.parent.R/upper_arm_ik_target.R/upper_arm_ik_target.R_end
     m_Weight: 1
   - m_Path: rig/root
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/root/DEF-spine
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/root/DEF-spine/DEF-spine.001
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: rig/root/DEF-spine/DEF-spine.001/DEF-spine.002
     m_Weight: 1
   - m_Path: rig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003

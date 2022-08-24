@@ -6687,7 +6687,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Inert: 0.75
+  m_Inert: 0.1
   m_InertDistrib:
     serializedVersion: 2
     m_Curve: []
@@ -12149,6 +12149,8 @@ MonoBehaviour:
   CameraShakeIntensity: 5
   HealthSlider: {fileID: 0}
   HealthSliderYellow: {fileID: 0}
+  LoadingScreen: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &8015691803478745500
 MonoBehaviour:
   m_ObjectHideFlags: 0

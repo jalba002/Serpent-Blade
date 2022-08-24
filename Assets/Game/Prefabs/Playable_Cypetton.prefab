@@ -1478,6 +1478,8 @@ MonoBehaviour:
   - {fileID: 4480606522500398325}
   startingRotationSpeed: 90
   maximumOverload: 50
+  debugGUI: 0
+  UpdateAI: 1
 --- !u!114 &3847656589819053338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1508,6 +1510,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 1000
   NeonHealthBarRenderer: {fileID: 3343187391567415194}
+  LoadingScreen: {fileID: 0}
+  WinScreen: {fileID: 0}
+  NextSceneName: 
 --- !u!1 &4153715895515209296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1560,7 @@ GameObject:
   - component: {fileID: 242745712254215124}
   m_Layer: 8
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1666,7 +1671,7 @@ GameObject:
   - component: {fileID: 5819445535810477219}
   m_Layer: 8
   m_Name: Capsule (1)
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1777,7 +1782,7 @@ GameObject:
   - component: {fileID: 2046761653670634174}
   m_Layer: 8
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
