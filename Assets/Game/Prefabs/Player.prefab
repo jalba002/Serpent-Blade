@@ -1631,7 +1631,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Inert: 0.75
+  m_Inert: 0.1
   m_InertDistrib:
     serializedVersion: 2
     m_Curve: []
@@ -13826,7 +13826,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Inert: 0.75
+  m_Inert: 0.1
   m_InertDistrib:
     serializedVersion: 2
     m_Curve: []
