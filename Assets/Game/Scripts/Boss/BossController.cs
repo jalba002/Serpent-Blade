@@ -103,8 +103,8 @@ namespace Boss
         private int[] mediumChances = new[]
         {
             5, // Rock
-            35, // Rays
-            20, // Electric
+            30, // Rays
+            25, // Electric
             40 // Projectiles
         };
 
@@ -389,8 +389,13 @@ namespace Boss
             if (currentOverload >= maximumOverload) return;
 
             currentOverload = Mathf.Min(currentOverload + amount, maximumOverload);
+            neonRecharger.UpdateNeonCharge(1-(currentOverload/maximumOverload));
             CheckOverload();
-            neonRecharger.UpdateNeonCharge(currentOverload/maximumOverload);
+        }
+
+        public void SetOverload(float amount)
+        {
+            currentOverload = amount;
         }
 
         public void CheckOverload()
@@ -398,7 +403,7 @@ namespace Boss
             if (currentOverload < maximumOverload) return;
 
             SetToBeStunned = true;
-            currentOverload = 0f;
+            //currentOverload = 0f;
         }
 
         public void ShowcaseLaser()

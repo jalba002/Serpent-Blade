@@ -1,55 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
-using Boss;
-using FMOD;
-using UnityEngine;
-using Debug = UnityEngine.Debug;
-
-public class Stunned : State
+namespace Boss
 {
-    private float stateTimeToExit;
-    private bool waitForFall = true;
-    protected override void OnStateInitialize()
+    public class Stunned : State
     {
-        _attackData = _stateMachine.GetAttackData("Stunned");
-        stateTimeToExit = _attackData.stateDuration + Time.timeSinceLevelLoad;
-        waitForFall = true;
-    }
+        private float stateTimeToExit;
 
-    protected override void OnStateUpdate(float deltaTime)
-    {
-        
-    }
-
-    protected override void OnStateFixedUpdate(float fixedDeltaTime)
-    {
-        
-    }
-
-    protected override void OnStateCheckTransition()
-    {
-        if (animationFinished && waitForFall)
+        protected override void OnStateInitialize()
         {
-            stateTimeToExit = Time.timeSinceLevelLoad+_attackData.stateDuration;
-            animationFinished = false;
-            waitForFall = false;
+            _attackData = _stateMachine.GetAttackData("Stunned");
         }
-        else if (stateTimeToExit <= Time.timeSinceLevelLoad)
+
+        protected override void OnStateUpdate(float deltaTime)
         {
-            // time to change state.
-            _stateMachine.SetAnimationTrigger("Stun Recovery");
-            _stateMachine.SwitchState<Idle>();
         }
-    }
 
-    protected override void OnStateEnter()
-    {
-        _stateMachine.SetAnimationTrigger("Stunned");
-        _stateMachine.SetRotationSpeed(_attackData.attackRotationSpeed);
-    }
+        protected override void OnStateFixedUpdate(float fixedDeltaTime)
+        {
+        }
 
-    protected override void OnStateExit()
-    {
-        _stateMachine.SetDefaultRotationSpeed();
+        protected override void OnStateCheckTransition()
+        {
+            if (animationFinished)
+            {
+                _stateMachine.SwitchState<Stunned_Loop>();
+            }
+        }
+
+        protected override void OnStateEnter()
+        {
+            _stateMachine.SetAnimationTrigger("Stunned");
+            _stateMachine.SetRotationSpeed(_attackData.attackRotationSpeed);
+        }
+
+        protected override void OnStateExit()
+        {
+        }
     }
 }

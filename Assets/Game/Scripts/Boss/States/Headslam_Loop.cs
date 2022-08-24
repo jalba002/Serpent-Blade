@@ -1,10 +1,19 @@
+using UnityEngine;
+
 namespace Boss
 {
-    public class Headslam : State
+    public class Headslam_Loop : State
     {
+        private float stateTimeToExit;
+        private bool waitForFal = true;
+
         protected override void OnStateInitialize()
         {
             _attackData = GetAttackData("Headslam");
+            if (_attackData)
+            {
+                stateTimeToExit = Time.timeSinceLevelLoad + _attackData.stateDuration;
+            }
         }
 
         protected override void OnStateUpdate(float deltaTime)
@@ -17,21 +26,20 @@ namespace Boss
 
         protected override void OnStateCheckTransition()
         {
-            if (animationFinished)
+            if (Time.timeSinceLevelLoad >= stateTimeToExit)
             {
-                _stateMachine.SwitchState<Headslam_Loop>();
+                _stateMachine.SwitchState<Headslam_Recovery>();
             }
         }
 
         protected override void OnStateEnter()
         {
-            _stateMachine.SetAnimationTrigger("Headslam");
             _stateMachine.SetRotationSpeed(_attackData.attackRotationSpeed);
         }
 
         protected override void OnStateExit()
         {
-            
+            _stateMachine.SetDefaultRotationSpeed();
         }
     }
 }

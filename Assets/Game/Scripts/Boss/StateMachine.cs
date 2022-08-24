@@ -93,6 +93,11 @@ namespace Boss
             _bossController.AddOverload(amount);
         }
 
+        public void SetOverload(float amount)
+        {
+            _bossController.SetOverload(amount);
+        }
+
         public void SetStateAnimFinished()
         {
             _currentState.animationFinished = true;

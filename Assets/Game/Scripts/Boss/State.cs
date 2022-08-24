@@ -1,8 +1,3 @@
-using System;
-using Boss;
-using UnityEngine;
-using UnityEngine.AddressableAssets;
-
 namespace Boss
 {
     public abstract class State
@@ -15,6 +10,10 @@ namespace Boss
         {
             _stateMachine = stateMachine;
             OnStateInitialize();
+            if (_attackData != null)
+            {
+                _stateMachine.AddOverload(_attackData.overloadAmount);
+            }
         }
 
         public void Update(float dt)
@@ -42,7 +41,6 @@ namespace Boss
             OnStateExit();
             if (_attackData != null)
             {
-                _stateMachine.AddOverload(_attackData.overloadAmount);
                 _stateMachine.SetCurrentWaitTime(_attackData.waitTime);
             }
         }

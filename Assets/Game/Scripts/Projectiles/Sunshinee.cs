@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using UnityEngine;
 
@@ -24,6 +26,7 @@ namespace Projectiles
 
         IEnumerator BulletSpawnWaves(Vector3 center)
         {
+            List<GameObject> objectsToStart = new List<GameObject>();
             int i = 0;
             float side = 360 / sides;
             while (i < waves)
@@ -33,6 +36,8 @@ namespace Projectiles
                     float angle = side * j * Mathf.Deg2Rad;
                     Vector3 direction = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
                     var go = Instantiate(projectilePrefab, center, Quaternion.identity);
+                    go.SetActive(false);
+                    objectsToStart.Add(go);
                     go.transform.forward = direction;
                     go.transform.position += go.transform.right * (Mathf.Sin(Time.timeSinceLevelLoad) * sineAmplitude);
                     go.GetComponent<Projectile>().Shoot(direction * projectileSpeed);
@@ -40,7 +45,13 @@ namespace Projectiles
                     //.velocity = direction * projectileSpeed;
                 }
 
+                foreach (var obj in objectsToStart)
+                {
+                    obj.SetActive(true);
+                }
+                
                 i++;
+                objectsToStart = new List<GameObject>();
                 yield return new WaitForSeconds(delayBetweenWaves);
             }
         }

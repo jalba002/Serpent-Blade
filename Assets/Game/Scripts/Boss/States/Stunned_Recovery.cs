@@ -1,10 +1,13 @@
 namespace Boss
 {
-    public class Headslam : State
+    public class Stunned_Recovery : State
     {
+        private float stateTimeToExit;
+        private bool waitForFall = true;
+
         protected override void OnStateInitialize()
         {
-            _attackData = GetAttackData("Headslam");
+            _attackData = _stateMachine.GetAttackData("Stunned");
         }
 
         protected override void OnStateUpdate(float deltaTime)
@@ -19,19 +22,18 @@ namespace Boss
         {
             if (animationFinished)
             {
-                _stateMachine.SwitchState<Headslam_Loop>();
+                // time to change state.
+                _stateMachine.SwitchState<Idle>();
             }
         }
 
         protected override void OnStateEnter()
         {
-            _stateMachine.SetAnimationTrigger("Headslam");
-            _stateMachine.SetRotationSpeed(_attackData.attackRotationSpeed);
+            _stateMachine.SetAnimationTrigger("Stun Recovery");
         }
 
         protected override void OnStateExit()
         {
-            
         }
     }
 }

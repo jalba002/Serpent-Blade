@@ -12,23 +12,17 @@ public class ElectricShout : State
 
     protected override void OnStateUpdate(float deltaTime)
     {
-        
     }
 
     protected override void OnStateFixedUpdate(float fixedDeltaTime)
     {
-        
     }
 
     protected override void OnStateCheckTransition()
     {
-        if (_attackData.stateDuration < 0)
+        if (animationFinished)
         {
-            if (animationFinished)
-            {
-                _stateMachine.SwitchState<Idle>();
-                //Debug.Log("Ray finished and going idle.");
-            }
+            _stateMachine.SwitchState<Idle>();
         }
     }
 
@@ -39,6 +33,5 @@ public class ElectricShout : State
 
     protected override void OnStateExit()
     {
-        
     }
 }
